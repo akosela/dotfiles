@@ -1,10 +1,12 @@
 #!/bin/sh
 
+url="https://raw.github.com/akosela/dotfiles/master"
+
 cd ~
-curl -fsSL http://raw.github.com/akosela/dotfiles/.Xresources > .Xresources.ak
-curl -fsSL http://raw.github.com/akosela/dotfiles/.bash_profile > .bash_profile.ak
-curl -fsSL http://raw.github.com/akosela/dotfiles/.bashrc > .bashrc.ak
-curl -fsSL http://raw.github.com/akosela/dotfiles/.mailrc > .mailrc.ak
+curl -fsSL $url/.Xresources > .Xresources.ak
+curl -fsSL $url/.bash_profile > .bash_profile.ak
+curl -fsSL $url/.bashrc > .bashrc.ak
+curl -fsSL $url/.mailrc > .mailrc.ak
 
 if [ -e .Xresources ]; then
 	cp .Xresources .Xresources.bak
