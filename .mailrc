@@ -1,0 +1,20 @@
+# ~./mailrc
+# -- akosela --
+
+set append ask autoprint 
+set indentprefix="> "
+set EDITOR=vi
+set toplines=25
+retain from bcc cc date to user-agent subject
+
+#
+# nail (heirloom mailx) specific
+#
+
+# bsd style mailx
+set bsdcompat
+#set autothread
+
+set signature=~/.signature
+set imap-cache=~/imap
+set imap-keepalive=60
