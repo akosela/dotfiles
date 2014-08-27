@@ -11,7 +11,7 @@ curl -fsSL $url/.mailrc > .mailrc.ak
 if [ -e .Xresources ]; then
 	cp .Xresources .Xresources.bak
 fi
-mv .Xresouces.ak .Xresources
+mv .Xresources.ak .Xresources
 
 if [ -e .bash_profile.ak ]; then
 	cp .bash_profile .bash_profile.bak
