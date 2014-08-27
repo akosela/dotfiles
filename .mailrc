@@ -1,4 +1,4 @@
-# ~./mailrc
+# ~/.mailrc
 # -- akosela --
 
 set append ask autoprint 
