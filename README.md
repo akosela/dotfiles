@@ -9,6 +9,6 @@
 # Andy Kosela <akosela@andykosela.com>
 
 # Install (it will copy your current dotfiles to *.bak)
-curl -L http://raw.github.com/akosela/dotfiles/master/install.sh > install.sh
-./install.sh
+curl -sL http://raw.github.com/akosela/dotfiles/master/install.sh > install.sh
+sh ./install.sh
 ```
