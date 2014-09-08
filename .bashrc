@@ -22,6 +22,7 @@ alias ll='ls -Fl'
 alias l='ls -Fm'
 alias h='history 20'
 alias p='pwd'
+alias gob='go build -ldflags "-s"'
 
 # functions
 s()
