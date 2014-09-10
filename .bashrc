@@ -3,6 +3,7 @@
 
 export PS1='\h \$ '
 export PAGER=less
+export PATH=$PATH:/data/prog/go/bin
 export GOPATH=/data/prog/go
 export HISTSIZE=2000
 export HISTCONTROL=ignoredups
