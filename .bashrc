@@ -30,6 +30,3 @@ s()
 {
         /usr/bin/ssh $1 -t "exec /bin/bash --rcfile ~/.bashrc.ak"
 }
-
-# fortune
-if [ -x /usr/games/fortune ] ; then /usr/games/fortune all ; fi
