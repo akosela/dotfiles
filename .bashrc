@@ -3,7 +3,7 @@
 
 export PS1='\h \$ '
 export PAGER=less
-export PATH=$PATH:/data/prog/go/bin
+export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/local/go/bin:/data/prog/go/bin
 export GOPATH=/data/prog/go
 export HISTSIZE=2000
 export HISTCONTROL=ignoredups
@@ -20,10 +20,14 @@ set -o vi
 # aliases
 alias ls='ls -F'
 alias ll='ls -Fl'
-alias l='ls -Fm'
+alias l='less'
 alias h='history 20'
 alias p='pwd'
-alias gob='go build -ldflags "-s"'
+alias ed='ed -G'
+alias up='uptime'
+alias bot='service'
+alias gb='go build -ldflags "-s"'
+alias gr='go run'
 
 # functions
 s()
