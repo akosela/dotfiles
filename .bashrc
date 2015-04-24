@@ -26,8 +26,8 @@ alias p='pwd'
 alias ed='ed -G'
 alias up='uptime'
 alias bot='service'
-alias gb='go build -ldflags "-s"'
-alias gr='go run'
+alias gob='go build -ldflags "-s"'
+alias gor='go run'
 
 # functions
 s()
