@@ -6,6 +6,7 @@ cd ~
 curl -fsSL $url/.Xresources > .Xresources.ak
 curl -fsSL $url/.bash_profile > .bash_profile.ak
 curl -fsSL $url/.bashrc > .bashrc.ak
+curl -fsSL $url/.exrc > .exrc.ak
 curl -fsSL $url/.mailrc > .mailrc.ak
 
 if [ -e .Xresources ]; then
@@ -22,6 +23,11 @@ if [ -e .bashrc ]; then
 	cp .bashrc .bashrc.bak
 fi
 mv .bashrc.ak .bashrc
+
+if [ -e .exrc ]; then
+	cp .exrc .exrc.bak
+fi
+mv .exrc.ak .exrc
 
 if [ -e .mailrc ]; then
 	cp .mailrc .mailrc.bak
