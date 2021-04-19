@@ -24,11 +24,11 @@ bind -m vi-insert "\C-l":clear-screen
 # aliases
 alias ls='ls -F'
 alias ll='ls -Fl'
-alias l='less'
 alias h='history 20'
 alias p='pwd'
 alias ed='ed -G'
 alias e='/usr/bin/ex'
+alias c='cat'
 alias bot='service'
 alias gob='go build -ldflags "-s"'
 alias gor='go run'
