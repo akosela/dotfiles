@@ -79,5 +79,5 @@ docker()
 
 docker_ps()
 {
-        command docker ps --format 'table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}' "$@"
+        command docker ps --format 'table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Command}}\t{{.Status}}' "$@"
 }
