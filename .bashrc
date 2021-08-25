@@ -35,6 +35,7 @@ alias gob='go build -ldflags "-s"'
 alias gor='go run'
 alias systemctl='systemctl --no-pager -l'
 alias journalctl='journalctl --no-pager -l'
+alias k='kubectl'
 
 # functions
 s()
