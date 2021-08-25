@@ -12,7 +12,7 @@ Shift <Key> Down: scroll-forw(1,page) \n\
 
 xterm*vt100*geometry: 80x36
 xterm*loginShell: true
-xterm*savelines: 3000
+xterm*saveLines: 10000
 xterm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-1
 xterm*boldfont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-1
 xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
