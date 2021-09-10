@@ -10,15 +10,23 @@ Shift <Key> Down: scroll-forw(1,page) \n\
 <Key> Up: scroll-back(1) \n\
 <Key> Down: scroll-forw(1) \n\
 
+# fonts 
+# default xterm font
+#xterm*font: -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
+#xterm*boldfont: -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
+# terminus
+#xterm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-1
+#xterm*boldfont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-1
+xterm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+xterm*boldfont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+
 xterm*vt100*geometry: 80x36
 xterm*loginShell: true
 xterm*saveLines: 10000
-xterm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-1
-xterm*boldfont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-1
 xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 xterm*eightBitInput: false
 
-xterm*foreground: rgb:a8/a8/a8
+xterm*foreground: gray
 xterm*background: rgb:00/00/00
 
 xterm*color0: rgb:00/00/00
