@@ -79,7 +79,7 @@ docker()
         fi
 }
 
-docker_ps()
+docker_p()
 {
         command docker ps --format 'table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Command}}\t{{.Status}}' "$@"
 }
