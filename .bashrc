@@ -68,18 +68,3 @@ git_co()
 {
         command git checkout "$@"
 }
-
-docker()
-{
-        local cmd=$1; shift
-        if command -v "docker_$cmd" >/dev/null 2>&1; then
-                "docker_$cmd" "$@"
-        else
-                command docker "$cmd" "$@"
-        fi
-}
-
-docker_p()
-{
-        command docker ps --format 'table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Command}}\t{{.Status}}' "$@"
-}
