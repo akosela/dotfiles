@@ -37,6 +37,7 @@ alias systemctl='systemctl --no-pager -l'
 alias journalctl='journalctl --no-pager -l'
 alias d='docker'
 alias k='kubectl'
+alias dps="docker ps --format 'table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Command}}\t{{.Status}}'"
 
 # functions
 s()
