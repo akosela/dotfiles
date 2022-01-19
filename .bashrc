@@ -3,7 +3,7 @@
 
 export PS1='\h \$ '
 export PAGER=less
-export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/local/go/bin:/data/prog/go/bin
+export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 export GOPATH=/data/prog/go
 export GIT_PAGER='less -+S'
 export HISTSIZE=2000
