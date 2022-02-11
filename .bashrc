@@ -27,6 +27,7 @@ alias cd..='cd ..'
 alias ls='ls -F'
 alias ll='ls -Fl'
 alias l='ls -Fm'
+alias g='git'
 alias h='history 20'
 alias p='pwd'
 alias ed='ed -G'
@@ -38,6 +39,7 @@ alias gor='go run'
 alias d='docker'
 alias k='kubectl'
 alias dps="docker ps --format 'table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Command}}\t{{.Status}}'"
+alias gl="git log -n 10 --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset <%an>' --abbrev-commit"
 
 # functions
 s()
@@ -68,6 +70,21 @@ git_st()
 git_co()
 {
 	command git checkout "$@"
+}
+
+git_b()
+{
+	command git branch -vv "$@"
+}
+
+git_sh()
+{
+	command git show "$@"
+}
+
+git_com()
+{
+	command git commit -am "$@"
 }
 
 gitbranch()
