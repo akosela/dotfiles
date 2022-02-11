@@ -27,64 +27,53 @@ alias cd..='cd ..'
 alias ls='ls -F'
 alias ll='ls -Fl'
 alias l='ls -Fm'
-alias g='git'
 alias h='history 20'
 alias p='pwd'
 alias ed='ed -G'
 alias e='/usr/bin/ex'
 alias c='cat'
 alias bot='service'
-alias gob='go build -ldflags "-s"'
-alias gor='go run'
+
+# docker aliases
 alias d='docker'
-alias k='kubectl'
 alias dps="docker ps --format 'table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Command}}\t{{.Status}}'"
+
+# k8s aliases
+alias k='kubectl'
+
+# ansible aliases
+alias a='ansible'
+alias ac='ansible-config'
+alias adoc='ansible-doc'
+alias ag='ansible-galaxy'
+alias ai='ansible-inventory'
+alias ans='ansible -e "ansible_user=kosela"'
+alias ap='ansible-playbook'
+alias apc='ansible-playbook --check'
+alias av='ansible-vault'
+
+# git aliases
+alias g='git'
+alias gadd='git add'
+alias gb='git branch -vv'
+alias gc='git checkout'
+alias gcom='git commit -am'
+alias gd='git diff'
+alias gdiff='git diff'
 alias gl="git log -n 10 --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset <%an>' --abbrev-commit"
+alias glog="git log --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset <%an>' --abbrev-commit"
+alias gmv='git mv'
+alias gp='git pull'
+alias gpull='git pull'
+alias gpush='git push'
+alias grm='git rm'
+alias gs='git status'
+alias gsh='git show'
 
 # functions
 s()
 {
 	/usr/bin/ssh $1 -t "exec /bin/bash --rcfile ~/.bashrc.ak"
-}
-
-git()
-{
-	local cmd=$1; shift
-	if command -v "git_$cmd" >/dev/null 2>&1; then
-		"git_$cmd" "$@"
-	else
-		command git "$cmd" "$@"
-	fi
-}
-
-git_l()
-{
-	command git log --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset <%an>' --abbrev-commit "$@"
-}
-
-git_st()
-{
-	command git status "$@"
-}
-
-git_co()
-{
-	command git checkout "$@"
-}
-
-git_b()
-{
-	command git branch -vv "$@"
-}
-
-git_sh()
-{
-	command git show "$@"
-}
-
-git_com()
-{
-	command git commit -am "$@"
 }
 
 gitbranch()
