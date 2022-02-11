@@ -33,6 +33,7 @@ alias ed='ed -G'
 alias e='/usr/bin/ex'
 alias c='cat'
 alias bot='service'
+alias sb='sudo bash'
 
 # docker aliases
 alias d='docker'
