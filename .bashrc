@@ -111,6 +111,7 @@ alias t='terraform'
 alias ta='terraform apply'
 alias tp='terraform plan'
 alias ts='terraform state'
+alias tv='terraform validate'
 alias tw='terraform workspace'
 alias twl='terraform workspace list'
 
