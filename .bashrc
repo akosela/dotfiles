@@ -24,6 +24,7 @@ bind -m vi-insert "\C-l":clear-screen
 
 # aliases
 alias a='ansible'
+alias ai='ansible-inventory'
 alias ap='ansible-playbook'
 alias c='cat'
 alias cd..='cd ..'
