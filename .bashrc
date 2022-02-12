@@ -28,6 +28,7 @@ alias ap='ansible-playbook'
 alias c='cat'
 alias cd..='cd ..'
 alias d='docker'
+alias dotupdate='curl https://raw.githubusercontent.com/akosela/dotfiles/master/.bashrc > ~/.bashrc'
 alias dps="docker ps --format 'table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Command}}\t{{.Status}}'"
 alias e='ex'
 alias h='history 20'
