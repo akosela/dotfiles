@@ -11,4 +11,7 @@
 # Install (it will copy your current dotfiles to *.bak)
 curl -OL http://raw.github.com/akosela/dotfiles/master/install.sh
 sh install.sh
+
+# Updating .bashrc
+dotupdate
 ```
