@@ -32,6 +32,7 @@ alias dotupdate='curl https://raw.githubusercontent.com/akosela/dotfiles/master/
 alias dps="docker ps --format 'table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Command}}\t{{.Status}}'"
 alias e='ex'
 alias h='history 20'
+alias ip='ip -br a'
 alias l='ls -Fm'
 alias ll='ls -Fl'
 alias ls='ls -F'
