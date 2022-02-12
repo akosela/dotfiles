@@ -23,16 +23,17 @@ set -o vi
 bind -m vi-insert "\C-l":clear-screen
 
 # aliases
-alias cd..='cd ..'
-alias ls='ls -F'
-alias ll='ls -Fl'
-alias l='ls -Fm'
-alias h='history 20'
-alias p='pwd'
-alias ed='ed -G'
-alias e='/usr/bin/ex'
-alias c='cat'
 alias bot='service'
+alias c='cat'
+alias cd..='cd ..'
+alias e='/usr/bin/ex'
+alias ed='ed -G'
+alias h='history 20'
+alias ip='ip -br a'
+alias l='ls -Fm'
+alias ll='ls -Fl'
+alias ls='ls -F'
+alias p='pwd'
 alias sb='sudo bash'
 
 # docker aliases
