@@ -42,22 +42,32 @@ alias tw='terraform workspace list'
 
 # git aliases
 alias add='git add'
+alias blame='git blame'
 alias br='git branch -vv'
 alias clone='git clone'
 alias co='git checkout'
 alias com='git commit -am'
 alias conf='git config -l'
 alias dif='git diff'
+alias fetch='git fetch'
 alias g='git'
 alias glog="git log --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset <%an>' --abbrev-commit"
+alias init='git init'
 alias log="git log -n 10 --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset <%an>' --abbrev-commit"
+alias merge='git merge'
 alias mov='git mv'
+alias pick='git cherry-pick'
 alias pull='git pull'
 alias push='git push'
+alias rebase='git rebase'
 alias rem='git rm'
 alias remote='git remote -v'
+alias reset='git reset'
+alias revert='git revert'
 alias show='git show'
 alias st='git status'
+alias stash='git stash'
+alias submod='git submodule'
 
 # k8s aliases
 alias k='kubectl'
