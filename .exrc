@@ -10,6 +10,8 @@ map T :set nu<CR>
 map t :set nonu<CR>
 noremap Q :set nu<CR> Q
 hi LineNr term=NONE
+filetype on
+autocmd FileType yaml setlocal ts=2 shiftwidth=2 expandtab
 
 if $_ == "/usr/bin/ex"
 	set nu
