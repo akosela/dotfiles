@@ -26,6 +26,7 @@ bind -m vi-insert "\C-l":clear-screen
 alias bot='service'
 alias c='cat'
 alias cd..='cd ..'
+alias dotupdate='curl https://raw.githubusercontent.com/akosela/dotfiles/master/.bashrc > ~/.bashrc'
 alias e='/usr/bin/ex'
 alias ed='ed -G'
 alias h='history 20'
