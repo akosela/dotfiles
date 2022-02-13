@@ -73,6 +73,7 @@ alias show='git show'
 alias st='git status'
 alias stash='git stash'
 alias submod='git submodule'
+alias tag='git tag'
 
 # k8s aliases
 alias k='kubectl'
