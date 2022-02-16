@@ -44,6 +44,7 @@ alias tw='terraform workspace list'
 
 # git aliases
 alias add='git add'
+alias bisect='git bisect'
 alias blame='git blame'
 alias br='git branch -vv'
 alias branch='git branch -vv'
@@ -65,6 +66,7 @@ alias log="git log -n 10 --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow
 alias merge='git merge'
 alias mov='git mv'
 alias pick='git cherry-pick'
+alias psh='git push'
 alias pull='git pull'
 alias push='git push'
 alias rebase='git rebase'
