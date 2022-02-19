@@ -104,4 +104,4 @@ gitbranch()
 }
 
 # start up
-figlet -f slant `hostname -s`
+figlet -f slant `hostname -s` >&2
