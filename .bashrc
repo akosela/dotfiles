@@ -95,12 +95,12 @@ alias scale='kubectl scale'
 # functions
 s()
 {
-	/usr/bin/ssh $1 -t "exec /bin/bash --rcfile ~/.bashrc.ak"
+  /usr/bin/ssh $1 -t "exec /bin/bash --rcfile ~/.bashrc.ak"
 }
 
 gitbranch()
 {
-	git branch --show-current 2> /dev/null | sed 's/\(.*\)/ (\1)/'
+  git branch --show-current 2> /dev/null | sed 's/\(.*\)/ (\1)/'
 }
 
 # start up

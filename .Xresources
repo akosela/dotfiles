@@ -1,5 +1,4 @@
 # ~/.Xresources
-# -- akosela --
 
 # MacOSX
 xterm*vt100.translations: #override \

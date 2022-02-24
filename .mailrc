@@ -1,5 +1,4 @@
 # ~/.mailrc
-# -- akosela --
 
 set append ask autoprint 
 set indentprefix="> "
