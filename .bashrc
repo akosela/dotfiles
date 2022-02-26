@@ -42,6 +42,13 @@ alias sb='sudo bash'
 alias t='terraform'
 alias tw='terraform workspace list'
 
+# systemctl aliases
+alias reload='systemctl reload'
+alias restart='systemctl restart'
+alias start='systemctl start'
+alias status='systemctl status'
+alias stop='systemctl stop'
+
 # git aliases
 alias add='git add'
 alias bisect='git bisect'
