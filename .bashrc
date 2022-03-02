@@ -109,6 +109,3 @@ gitbranch()
 {
 	git branch --show-current 2> /dev/null | sed 's/\(.*\)/ (\1)/'
 }
-
-# start up
-figlet -f slant `hostname -s` >&2

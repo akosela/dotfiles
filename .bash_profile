@@ -1,4 +1,2 @@
 . ~/.bashrc
-
-# fortune
-if [ -x /usr/games/fortune ]; then /usr/games/fortune all ; fi
+figlet -f slant `hostname -s`
