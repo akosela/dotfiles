@@ -15,6 +15,7 @@ map t :set nonu<CR>
 map T :set nu<CR>
 noremap Q :set nu<CR> Q
 hi LineNr term=NONE
+hi LineNr ctermfg=gray
 filetype on
 autocmd FileType yaml syntax on setlocal sts=2 shiftwidth=2 expandtab
 autocmd FileType c,cpp,go,sh syntax on
