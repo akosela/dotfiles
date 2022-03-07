@@ -11,7 +11,7 @@ Shift <Key> Down: scroll-forw(1,page) \n\
 
 # fonts 
 # default xterm font
-#xterm*font: -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
+xterm*font: -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
 #xterm*boldfont: -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
 # terminus
 #xterm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-1
@@ -25,6 +25,7 @@ xterm*saveLines: 10000
 xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 xterm*eightBitInput: false
 
+# dos colors
 xterm*foreground: gray
 xterm*background: rgb:00/00/00
 
@@ -45,6 +46,7 @@ xterm*color13: rgb:fc/54/fc
 xterm*color14: rgb:54/fc/fc
 xterm*color15: rgb:fc/fc/fc
 
+xterm*allowBoldFonts: false
 xterm*boldMode: false
 xterm*colorBDMode: true
 xterm*colorBD: rgb:fc/fc/fc
