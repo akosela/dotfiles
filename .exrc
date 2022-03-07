@@ -22,3 +22,4 @@ autocmd FileType sh syntax on
 if $_ == "/usr/bin/ex"
 	set nu
 endif
+let g:loaded_matchparen=1
