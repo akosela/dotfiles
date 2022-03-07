@@ -15,9 +15,7 @@ noremap Q :set nu<CR> Q
 hi LineNr term=NONE
 filetype on
 autocmd FileType yaml syntax on setlocal sts=2 shiftwidth=2 expandtab
-autocmd FileType c syntax on
-autocmd FileType cpp syntax on
-autocmd FileType sh syntax on
+autocmd FileType c,cpp,sh syntax on
 
 if $_ == "/usr/bin/ex"
 	set nu
