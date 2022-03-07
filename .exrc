@@ -1,8 +1,11 @@
+set bg=dark
 set showmode
 set noprompt
 set autoindent
 set noruler
 set nuw=1
+set t_ti= t_te=
+set t_md=
 map f !}fmt -s -w79
 map z :w<CR> :set nu<CR> :$r !cc %<CR><CR>
 map Z :!./a.out<CR>
@@ -11,7 +14,10 @@ map T :set nu<CR>
 noremap Q :set nu<CR> Q
 hi LineNr term=NONE
 filetype on
-autocmd FileType yaml setlocal sts=2 shiftwidth=2 expandtab
+autocmd FileType yaml syntax on setlocal sts=2 shiftwidth=2 expandtab
+autocmd FileType c syntax on
+autocmd FileType cpp syntax on
+autocmd FileType sh syntax on
 
 if $_ == "/usr/bin/ex"
 	set nu
