@@ -11,7 +11,8 @@ export HISTCONTROL=ignoredups
 export MANLESS=:
 
 # sane term
-export TERM=vt100
+#export TERM=vt100
+export TERM=xterm
 
 # correct umask
 umask 022
