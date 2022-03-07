@@ -6,6 +6,7 @@ set noruler
 set nuw=1
 set t_ti= t_te=
 set t_md=
+set t_Co=256
 map f !}fmt -s -w79
 map z :w<CR> :set nu<CR> :$r !cc %<CR><CR>
 map Z :!./a.out<CR>
