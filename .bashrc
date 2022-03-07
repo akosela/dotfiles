@@ -9,6 +9,7 @@ export GIT_PAGER='less -+S'
 export HISTSIZE=2000
 export HISTCONTROL=ignoredups
 export LANG=en_US.UTF-8
+export LESS='-XFR'
 export MANLESS=:
 
 # sane term
