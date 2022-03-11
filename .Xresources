@@ -25,9 +25,15 @@ xterm*saveLines: 10000
 xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 xterm*eightBitInput: false
 
+# acme colors
+xterm*foreground: black
+xterm*background: rgb:ff/ff/ea
+xterm*colorBD: black
+
 # dos colors
-xterm*foreground: gray
-xterm*background: rgb:00/00/00
+#xterm*foreground: gray
+#xterm*background: rgb:00/00/00
+#xterm*colorBD: rgb:fc/fc/fc
 
 xterm*color0: rgb:00/00/00
 xterm*color1: rgb:a8/00/00
@@ -49,4 +55,3 @@ xterm*color15: rgb:fc/fc/fc
 xterm*allowBoldFonts: false
 xterm*boldMode: false
 xterm*colorBDMode: true
-xterm*colorBD: rgb:fc/fc/fc

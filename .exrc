@@ -1,4 +1,5 @@
-set bg=dark
+"set bg=dark
+set bg=light
 set showmode
 set noprompt
 set autoindent
