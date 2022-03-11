@@ -10,14 +10,9 @@ Shift <Key> Down: scroll-forw(1,page) \n\
 <Key> Down: scroll-forw(1) \n\
 
 # fonts 
-# default xterm font
-xterm*font: -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
-#xterm*boldfont: -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
-# terminus
-#xterm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-1
-#xterm*boldfont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-1
+#xterm*font: -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
 xterm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-xterm*boldfont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+#xterm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-1
 
 xterm*vt100*geometry: 80x36
 xterm*loginShell: true
