@@ -1,8 +1,6 @@
-# ~/.Xresources
-
-# MacOSX
+# for MacOSX to paste with cmd-v
 xterm*vt100.translations: #override \
-Meta <Key> C: select-cursor-start() select-cursor-end(PRIMARY, CUT_BUFFER0) \n\
+Meta <Key> C: select-cursor-start(PRIMARY, CUT_BUFFER0) \n\
 Meta <Key> V: insert-selection(PRIMARY, CUT_BUFFER0) \n\
 Shift <Key> Up: scroll-back(1,page) \n\
 Shift <Key> Down: scroll-forw(1,page) \n\
@@ -13,6 +11,7 @@ Shift <Key> Down: scroll-forw(1,page) \n\
 #xterm*font: -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
 xterm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 #xterm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-1
+#xterm*font: -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
 
 xterm*vt100*geometry: 80x36
 xterm*loginShell: true
@@ -21,9 +20,24 @@ xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 xterm*eightBitInput: false
 
 # acme colors
-#xterm*foreground: black
+#xterm*foreground: rgb:00/00/00
 #xterm*background: rgb:ff/ff/ea
-#xterm*colorBD: black
+#xterm*colorBD: rgb:00/00/00
+
+# amber monochrome colors
+#xterm*foreground: rgb:ff/cc/00
+#xterm*background: rgb:00/00/00
+#xterm*colorBD: rgb:ff/cc/00
+
+# green monochrome colors
+#xterm*foreground: rgb:33/ff/33
+#xterm*background: rgb:00/00/00
+#xterm*colorBD: rgb:33/ff/33
+
+# modern colors
+#xterm*foreground: gray
+#xterm*background: rgb:28/28/28
+#xterm*colorBD: rgb:fc/fc/fc
 
 # dos colors
 #xterm*foreground: gray
@@ -34,22 +48,22 @@ xterm*foreground: gray
 xterm*background: darkblue
 xterm*colorBD: white
 
-xterm*color0: rgb:00/00/00      # black
-xterm*color1: rgb:a8/00/00      # blue
-xterm*color2: rgb:00/a8/00      # green
-xterm*color3: rgb:a8/54/00      # cyan
-xterm*color4: rgb:00/00/a8      # red
-xterm*color5: rgb:a8/00/a8      # magenta
-xterm*color6: rgb:00/a8/a8      # brown
-xterm*color7: rgb:a8/a8/a8      # gray
-xterm*color8: rgb:54/54/54      # dark gray
-xterm*color9: rgb:fc/54/54      # bright blue
-xterm*color10: rgb:54/fc/54     # bright green
-xterm*color11: rgb:fc/fc/54     # bright cyan
-xterm*color12: rgb:54/54/fc     # bright red
-xterm*color13: rgb:fc/54/fc     # bright magenta
-xterm*color14: rgb:54/fc/fc     # bright yellow
-xterm*color15: rgb:fc/fc/fc     # bright white
+xterm*color0: rgb:00/00/00
+xterm*color1: rgb:a8/00/00
+xterm*color2: rgb:00/a8/00
+xterm*color3: rgb:a8/54/00
+xterm*color4: rgb:00/00/a8
+xterm*color5: rgb:a8/00/a8
+xterm*color6: rgb:00/a8/a8
+xterm*color7: rgb:a8/a8/a8
+xterm*color8: rgb:54/54/54
+xterm*color9: rgb:fc/54/54
+xterm*color10: rgb:54/fc/54
+xterm*color11: rgb:fc/fc/54
+xterm*color12: rgb:54/54/fc
+xterm*color13: rgb:fc/54/fc
+xterm*color14: rgb:54/fc/fc
+xterm*color15: rgb:fc/fc/fc
 
 xterm*allowBoldFonts: false
 xterm*boldMode: false
