@@ -70,9 +70,11 @@ alias format-patch='git format-patch'
 alias g='git'
 alias gg='git grep'
 alias ggrep='git grep'
-alias glog="git log --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset <%an>' --abbrev-commit"
+#alias glog="git log --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset <%an>' --abbrev-commit"
+alias glog="git log --graph --pretty=format:'%C(brightwhite)%h%Creset -%C(brightred)%d%Creset %s %C(brightcyan)(%cr)%Creset <%an>' --abbrev-commit"
 alias init='git init'
-alias log="git log -n 10 --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset <%an>' --abbrev-commit"
+#alias log="git log -n 10 --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset <%an>' --abbrev-commit"
+alias log="git log -n 10 --graph --pretty=format:'%C(brightwhite)%h%Creset -%C(brightred)%d%Creset %s %C(brightcyan)(%cr)%Creset <%an>' --abbrev-commit"
 alias merge='git merge'
 alias move='git mv'
 alias pick='git cherry-pick'
