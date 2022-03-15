@@ -3,8 +3,7 @@
 #export PS1='\h \$ '
 export PS1='\h`gitbranch` \$ '
 export PAGER=less
-export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
-export GOPATH=/data/prog/go
+export PATH=/bin:/usr/bin:/usr/sbin:/sbin:/usr/local/bin
 export GIT_PAGER='less -+S'
 export HISTSIZE=2000
 export HISTCONTROL=ignoredups
@@ -70,11 +69,9 @@ alias format-patch='git format-patch'
 alias g='git'
 alias gg='git grep'
 alias ggrep='git grep'
-#alias glog="git log --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset <%an>' --abbrev-commit"
-alias glog="git log --graph --pretty=format:'%C(brightwhite)%h%Creset -%C(brightred)%d%Creset %s %C(brightcyan)(%cr)%Creset <%an>' --abbrev-commit"
+alias glog="git log --graph --pretty=format:'%C(white bold)%h%Creset -%C(red bold)%d%Creset %s %C(cyan bold)(%cr)%Creset <%an>' --abbrev-commit"
 alias init='git init'
-#alias log="git log -n 10 --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset <%an>' --abbrev-commit"
-alias log="git log -n 10 --graph --pretty=format:'%C(brightwhite)%h%Creset -%C(brightred)%d%Creset %s %C(brightcyan)(%cr)%Creset <%an>' --abbrev-commit"
+alias log="git log -n 10 --graph --pretty=format:'%C(white bold)%h%Creset -%C(red bold)%d%Creset %s %C(cyan bold)(%cr)%Creset <%an>' --abbrev-commit"
 alias merge='git merge'
 alias move='git mv'
 alias pick='git cherry-pick'
@@ -108,10 +105,10 @@ alias replace='kubectl replace'
 alias scale='kubectl scale'
 
 # functions
-s()
-{
-	/usr/bin/ssh $1 -t "exec /bin/bash --rcfile ~/.bashrc.ak"
-}
+#s()
+#{
+#	/usr/bin/ssh $1 -t "exec /bin/bash --rcfile ~/.bashrc.ak"
+#}
 
 gitbranch()
 {
