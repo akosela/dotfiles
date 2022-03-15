@@ -34,6 +34,11 @@ xterm*eightBitInput: false
 #xterm*background: rgb:00/00/00
 #xterm*colorBD: rgb:33/ff/33
 
+# atari colors
+#xterm*foreground: rgb:6b/a6/d6
+#xterm*background: rgb:08/49/7b
+#xterm*colorBD: white
+
 # modern colors
 #xterm*foreground: gray
 #xterm*background: rgb:28/28/28
