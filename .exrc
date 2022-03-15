@@ -8,7 +8,7 @@ set t_ti= t_te=
 set t_md=
 set t_Co=256
 set noloadplugins
-map f !}fmt -s -w79
+map f !}fmt -w79
 map z :w<CR> :set nu<CR> :$r !cc %<CR><CR>
 map Z :!./a.out<CR>
 map t :set nonu<CR>
@@ -17,7 +17,8 @@ noremap Q :set nu<CR> Q
 hi LineNr term=NONE
 hi LineNr ctermfg=gray
 filetype on
-autocmd FileType yaml syntax on setlocal sts=2 shiftwidth=2 expandtab
+autocmd FileType yaml syntax on
+autocmd FileType yaml setlocal sts=2 shiftwidth=2 expandtab
 autocmd FileType c,cpp,go,sh syntax on
 
 if $_ == "/usr/bin/ex"
