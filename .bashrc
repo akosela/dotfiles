@@ -34,6 +34,8 @@ alias d='docker'
 alias dotupdate='curl https://raw.githubusercontent.com/akosela/dotfiles/master/.bashrc > ~/.bashrc'
 alias dps="docker ps --format 'table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Command}}\t{{.Status}}'"
 alias e='ex'
+alias gob='go build -ldflags="-s -w"'
+alias gor='go run'
 alias h='history 20'
 alias ipa='ip -br a'
 alias l='ls -Fm'
