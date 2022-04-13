@@ -102,7 +102,7 @@ alias switch='git switch'
 alias tag='git tag'
 
 # k8s aliases
-alias apply='kubectl apply -f'
+alias apply='kubectl apply'
 alias create='kubectl create'
 alias del='kubectl delete'
 alias desc='kubectl describe'
