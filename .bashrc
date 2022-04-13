@@ -11,6 +11,10 @@ export LANG=en_US.UTF-8
 export LESS='-XFR'
 export MANLESS=:
 
+# ansible colors
+export ANSIBLE_COLOR_OK='normal'
+export ANSIBLE_COLOR_VERBOSE='normal'
+
 # sane term
 #export TERM=vt100
 export TERM=xterm
