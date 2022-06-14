@@ -53,6 +53,7 @@ alias s='ssh'
 alias sb='sudo bash'
 alias t='terraform'
 alias tw='terraform workspace list'
+alias v='vi'
 
 # systemctl aliases
 alias reload='systemctl reload'
