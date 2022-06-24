@@ -15,14 +15,16 @@ map t :set nonu<CR>
 map T :set nu<CR>
 noremap Q :set nu<CR> Q
 syn match com /^".*$/
-syn match com /# .*$/
+syn match com /#.*$/
 syn match com /\/\/.*$/
 syn match com /\/\*.*$/
+syn match shebang /#!/
 syn match space_err display excludenl "\s\+$"
 syn match string /".*"/
 syn match string /'.*'/
-hi LineNr term=NONE ctermfg=grey
+hi LineNr cterm=NONE ctermfg=grey
 hi com ctermfg=lightblue
+hi shebang cterm=NONE
 hi space_err ctermbg=red
 hi string ctermfg=white
 filetype on
