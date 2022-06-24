@@ -13,7 +13,8 @@ xterm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 #xterm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-1
 #xterm*font: -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
 
-xterm*vt100*geometry: 80x36
+#xterm*vt100*geometry: 80x36
+xterm*vt100*geometry: 80x30
 xterm*loginShell: true
 xterm*saveLines: 10000
 xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
@@ -23,6 +24,7 @@ xterm*eightBitInput: false
 #xterm*foreground: rgb:00/00/00
 #xterm*background: rgb:ff/ff/ff
 #xterm*colorBD: rgb:00/00/00
+#xterm*colorBD: blue
 
 # acme colors
 #xterm*foreground: rgb:00/00/00
@@ -32,7 +34,7 @@ xterm*eightBitInput: false
 # amber monochrome colors
 #xterm*foreground: rgb:ff/cc/00
 #xterm*background: rgb:00/00/00
-#xterm*colorBD: rgb:ff/cc/00
+#xterm*colorBD: yellow
 
 # green monochrome colors
 #xterm*foreground: rgb:33/ff/33
@@ -50,13 +52,13 @@ xterm*eightBitInput: false
 #xterm*colorBD: rgb:fc/fc/fc
 
 # dos colors
-#xterm*foreground: gray
-#xterm*background: rgb:00/00/00
-#xterm*colorBD: rgb:fc/fc/fc
-
 xterm*foreground: gray
-xterm*background: darkblue
-xterm*colorBD: white
+xterm*background: rgb:00/00/00
+xterm*colorBD: rgb:fc/fc/fc
+
+#xterm*foreground: gray
+#xterm*background: darkblue
+#xterm*colorBD: white
 
 xterm*color0: rgb:00/00/00
 xterm*color1: rgb:a8/00/00

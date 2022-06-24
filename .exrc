@@ -14,12 +14,20 @@ map Z :!./a.out<CR>
 map t :set nonu<CR>
 map T :set nu<CR>
 noremap Q :set nu<CR> Q
-hi LineNr term=NONE
-hi LineNr ctermfg=gray
+syn match com /^".*$/
+syn match com /# .*$/
+syn match com /\/\/.*$/
+syn match com /\/\*.*$/
+syn match space_err display excludenl "\s\+$"
+syn match string /".*"/
+syn match string /'.*'/
+hi LineNr term=NONE ctermfg=grey
+hi com ctermfg=lightblue
+hi space_err ctermbg=red
+hi string ctermfg=white
 filetype on
 autocmd FileType yaml syntax on
 autocmd FileType yaml setlocal sts=2 shiftwidth=2 expandtab
-autocmd FileType c,cpp,go,sh syntax on
 
 if $_ == "/usr/bin/ex"
 	set nu
