@@ -28,7 +28,6 @@ hi shebang cterm=NONE
 hi space_err ctermbg=red
 hi string ctermfg=white
 filetype on
-autocmd FileType yaml syntax on
 autocmd FileType yaml setlocal sts=2 shiftwidth=2 expandtab
 
 if $_ == "/usr/bin/ex"
