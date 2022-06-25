@@ -24,6 +24,10 @@ syn match space_err display excludenl "\s\+$"
 syn match string /".*"/
 syn match string /'.*'/
 syn match string /<.*>/
+syn match string /{/
+syn match string /}/
+syn match parentheses1 /(.*/
+syn match parentheses2 /(.*)/
 syn match preprocessor /#include/
 syn match preprocessor /#pragma/
 syn match preprocessor /#define/
@@ -39,9 +43,11 @@ syn match preprocessor /#ifndef/
 syn match preprocessor /#line/
 hi LineNr cterm=NONE ctermfg=grey
 hi com ctermfg=lightblue
+hi string ctermfg=white
 hi shebang cterm=NONE
 hi space_err ctermbg=red
-hi string ctermfg=white
+hi parentheses1 ctermfg=red
+hi parentheses2 cterm=NONE
 hi preprocessor ctermfg=cyan
 filetype on
 autocmd FileType yaml setlocal sts=2 shiftwidth=2 expandtab
