@@ -27,7 +27,9 @@ syn match string /<.*>/
 syn match string /{/
 syn match string /}/
 syn match parentheses1 /(.*/
+syn match parentheses1 /\[.*/
 syn match parentheses2 /(.*)/
+syn match parentheses2 /\[.*\]/
 syn match preprocessor /#include/
 syn match preprocessor /#pragma/
 syn match preprocessor /#define/
