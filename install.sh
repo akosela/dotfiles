@@ -7,6 +7,7 @@ curl -fsSL $url/.Xresources > .Xresources.ak
 curl -fsSL $url/.bash_profile > .bash_profile.ak
 curl -fsSL $url/.bashrc > .bashrc.ak
 curl -fsSL $url/.exrc > .exrc.ak
+curl -fsSL $url/.exrc.white > .exrc.white.ak
 curl -fsSL $url/.mailrc > .mailrc.ak
 curl -fsSL $url/.tmux.conf > .tmux.conf.ak
 curl -fsSL $url/.gitconfig > .gitconfig.ak
@@ -30,6 +31,11 @@ if [ -e .exrc ]; then
 	cp .exrc .exrc.bak
 fi
 mv .exrc.ak .exrc
+
+if [ -e .exrc ]; then
+	cp .exrc .exrc.bak
+fi
+mv .exrc.white.ak .exrc.white
 
 if [ -e .mailrc ]; then
 	cp .mailrc .mailrc.bak

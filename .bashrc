@@ -54,6 +54,7 @@ alias sb='sudo bash'
 alias t='terraform'
 alias tw='terraform workspace list'
 alias v='vi'
+alias vim='vi -u ~/.exrc.white'
 
 # systemctl aliases
 alias reload='systemctl reload'
