@@ -23,11 +23,26 @@ syn match shebang /#!/
 syn match space_err display excludenl "\s\+$"
 syn match string /".*"/
 syn match string /'.*'/
+syn match string /<.*>/
+syn match preprocessor /#include/
+syn match preprocessor /#pragma/
+syn match preprocessor /#define/
+syn match preprocessor /#error/
+syn match preprocessor /#warning/
+syn match preprocessor /#undef/
+syn match preprocessor /#if/
+syn match preprocessor /#else/
+syn match preprocessor /#elif/
+syn match preprocessor /#endif/
+syn match preprocessor /#ifdef/
+syn match preprocessor /#ifndef/
+syn match preprocessor /#line/
 hi LineNr cterm=NONE ctermfg=grey
 hi com ctermfg=lightblue
 hi shebang cterm=NONE
 hi space_err ctermbg=red
 hi string ctermfg=white
+hi preprocessor ctermfg=cyan
 filetype on
 autocmd FileType yaml setlocal sts=2 shiftwidth=2 expandtab
 
