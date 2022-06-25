@@ -1,3 +1,4 @@
+set nocompatible
 set bg=dark
 set showmode
 set noprompt
@@ -17,7 +18,7 @@ noremap Q :set nu<CR> Q
 syn match com /^".*$/
 syn match com /#.*$/
 syn match com /\/\/.*$/
-syn match com /\/\*.*$/
+syn region com start=/\/\*/ end=/\*\//
 syn match shebang /#!/
 syn match space_err display excludenl "\s\+$"
 syn match string /".*"/
