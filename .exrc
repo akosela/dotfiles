@@ -15,44 +15,28 @@ map Z :!./a.out<CR>
 map t :set nonu<CR>
 map T :set nu<CR>
 noremap Q :set nu<CR> Q
-syn match com /^".*$/
-syn match com /#.*$/
-syn match com /\/\/.*$/
-syn region com start=/\/\*/ end=/\*\//
-syn match shebang /#!/
-syn match space_err display excludenl "\s\+$"
-syn match string /".*"/
-syn match string /'.*'/
-syn match string /<.*>/
-syn match string /{/
-syn match string /}/
-syn match parentheses1 /(.*/
-syn match parentheses1 /\[.*/
-syn match parentheses2 /(.*)/
-syn match parentheses2 /\[.*\]/
-syn match preprocessor /#include/
-syn match preprocessor /#pragma/
-syn match preprocessor /#define/
-syn match preprocessor /#error/
-syn match preprocessor /#warning/
-syn match preprocessor /#undef/
-syn match preprocessor /#if/
-syn match preprocessor /#else/
-syn match preprocessor /#elif/
-syn match preprocessor /#endif/
-syn match preprocessor /#ifdef/
-syn match preprocessor /#ifndef/
-syn match preprocessor /#line/
-hi LineNr cterm=NONE ctermfg=grey
-hi com ctermfg=lightblue
-hi string ctermfg=white
-hi shebang cterm=NONE
-hi space_err ctermbg=red
-hi parentheses1 ctermfg=red
-hi parentheses2 cterm=NONE
-hi preprocessor ctermfg=cyan
 filetype on
+hi LineNr cterm=NONE ctermfg=grey
 autocmd FileType yaml setlocal sts=2 shiftwidth=2 expandtab
+autocmd FileType sh
+	\ syn match com /#.*$/ |
+	\ syn match shebang /#!/ |
+	\ syn match space_err display excludenl "\s\+$" |
+	\ hi shebang cterm=NONE |
+	\ hi space_err ctermbg=red |
+	\ hi com ctermfg=lightblue
+autocmd FileType c
+	\ syn match com /\/\/.*$/ |
+	\ syn region com start=/\/\*/ end=/\*\// |
+	\ syn match space_err display excludenl "\s\+$" |
+	\ syn match string /".*"/ |
+	\ syn match string /'.*'/ |
+	\ syn match string /<.*>/ |
+	\ syn match string /{/ |
+	\ syn match string /}/ |
+	\ hi string ctermfg=white |
+	\ hi space_err ctermbg=red |
+	\ hi com ctermfg=lightblue
 
 if $_ == "/usr/bin/ex"
 	set nu
