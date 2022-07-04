@@ -8,7 +8,7 @@ remote = cyan bold
 upstream = red bold
 
 [color "diff"]
-old = red bold
+old = normal
 new = green bold
 commit = white bold
 
