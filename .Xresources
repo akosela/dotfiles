@@ -2,10 +2,10 @@
 xterm*vt100.translations: #override \
 Meta <Key> C: select-cursor-start(PRIMARY, CUT_BUFFER0) \n\
 Meta <Key> V: insert-selection(PRIMARY, CUT_BUFFER0) \n\
-Shift <Key> Up: scroll-back(1,page) \n\
-Shift <Key> Down: scroll-forw(1,page) \n\
-<Key> Up: scroll-back(1) \n\
-<Key> Down: scroll-forw(1) \n\
+Shift <Key> Left: scroll-back(1,page) \n\
+Shift <Key> Right: scroll-forw(1,page) \n\
+<Key> Left: scroll-back(1) \n\
+<Key> Right: scroll-forw(1) \n\
 
 # fonts 
 #xterm*font: -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
