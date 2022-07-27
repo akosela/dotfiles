@@ -32,8 +32,6 @@ autocmd FileType c
 	\ syn match string /".*"/ |
 	\ syn match string /'.*'/ |
 	\ syn match string /<.*>/ |
-	\ syn match string /{/ |
-	\ syn match string /}/ |
 	\ hi string ctermfg=white |
 	\ hi space_err ctermbg=red |
 	\ hi com ctermfg=lightblue
