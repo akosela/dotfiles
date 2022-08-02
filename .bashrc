@@ -10,6 +10,7 @@ export HISTCONTROL=ignoredups
 export LANG=en_US.UTF-8
 export LESS='-XFR'
 export MANLESS=:
+export SYSTEMD_LESS=FRXMK
 
 # ansible colors
 export ANSIBLE_COLOR_OK='normal'
@@ -46,6 +47,7 @@ alias h='head'
 alias hi='history 20'
 alias ipa='ip -br a'
 alias j='journalctl'
+alias k='kubectl'
 alias l='less'
 alias ll='ls -Fl'
 alias ls='ls -F'
