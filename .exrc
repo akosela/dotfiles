@@ -36,9 +36,9 @@ autocmd FileType c
 	\ hi com ctermfg=lightblue
 autocmd FileType yaml setlocal sts=2 shiftwidth=2 expandtab
 autocmd FileType yaml
-	\ syn match com /#.*$/ |
 	\ syn match item /.*: / |
 	\ syn match var /{{.*}}/ |
+	\ syn match com /#.*$/ |
 	\ hi com ctermfg=red |
 	\ hi item ctermfg=lightblue |
 	\ hi var ctermfg=white
