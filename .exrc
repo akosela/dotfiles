@@ -17,6 +17,9 @@ map T :set nu<CR>
 noremap Q :set nu<CR> Q
 filetype on
 hi LineNr cterm=NONE ctermfg=grey
+autocmd FileType conf,gitconfig
+	\ syn match com /#.*$/ |
+	\ hi com ctermfg=lightblue
 autocmd FileType sh
 	\ syn match com /#.*$/ |
 	\ syn match shebang /#!/ |
