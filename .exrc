@@ -25,6 +25,7 @@ autocmd FileType sh
 	\ hi space_err ctermbg=red |
 	\ hi com ctermfg=lightblue
 autocmd FileType c
+	\ syn match numbers /[0-9]*/ |
 	\ syn match com /\/\/.*$/ |
 	\ syn region com start=/\/\*/ end=/\*\// |
 	\ syn match space_err display excludenl "\s\+$" |
@@ -33,7 +34,8 @@ autocmd FileType c
 	\ syn match string /<.*>/ |
 	\ hi string ctermfg=white |
 	\ hi space_err ctermbg=red |
-	\ hi com ctermfg=lightblue
+	\ hi com ctermfg=lightblue |
+	\ hi numbers ctermfg=white
 autocmd FileType yaml setlocal sts=2 shiftwidth=2 expandtab
 autocmd FileType yaml
 	\ syn match item /.*: / |
