@@ -30,7 +30,7 @@ autocmd FileType sh
   \ syn match v /$#.*/ |
   \ syn match shebang /#!/ |
   \ syn match func /.*()/ |
-  \ syn match space_err display excludenl "\s\+$" |
+  \ syn match space_err display excludenl /\s\+$/ |
   \ hi shebang cterm=NONE |
   \ hi space_err ctermbg=red |
   \ hi com ctermfg=lightblue |
