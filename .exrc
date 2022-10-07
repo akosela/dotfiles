@@ -50,9 +50,9 @@ autocmd FileType c
   \ hi com ctermfg=lightblue |
   \ hi numbers ctermfg=white |
 autocmd FileType yaml
-  \ syn match item /.*: / |
-  \ syn match var /{{.*}}/ |
+  \ syn match item /\w\+:/ |
   \ syn match com /#.*$/ |
+  \ syn match var /{{.*}}/ |
   \ hi com ctermfg=red |
   \ hi item ctermfg=lightblue |
   \ hi var ctermfg=white
