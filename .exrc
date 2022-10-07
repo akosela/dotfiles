@@ -26,10 +26,10 @@ autocmd FileType conf,gitconfig
   \ hi com ctermfg=lightblue
 autocmd FileType sh
   \ syn match numbers /[0-9]*/ |
-  \ syn match com /#.*$/ |
   \ syn match v /$#.*/ |
   \ syn match shebang /#!/ |
-  \ syn match func /.*()/ |
+  \ syn match func /^.*()/ |
+  \ syn match com /#.*$/ |
   \ syn match space_err display excludenl /\s\+$/ |
   \ hi shebang cterm=NONE |
   \ hi space_err ctermbg=red |
