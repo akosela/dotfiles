@@ -62,10 +62,13 @@ alias vim='vi -u ~/.exrc.white'
 alias x='exit'
 
 # systemctl aliases
+alias disable='systemctl disable'
+alias enable='systemctl enable'
 alias reload='systemctl reload'
 alias restart='systemctl restart'
 alias start='systemctl start'
 alias status='systemctl status'
+alias sts='systemctl status'
 alias stop='systemctl stop'
 
 # git aliases
