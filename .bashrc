@@ -86,7 +86,6 @@ alias com='git commit -am'
 alias commit='git commit -am'
 alias conf='git config -l'
 alias dif='git diff'
-alias down='git log --all --decorate --oneline | grep -A 1 $(git rev-parse --short HEAD) | awk '{print $1}' | tail -1 | xargs -I {} git checkout {}'
 alias fetch='git fetch'
 alias filter-branch='git filter-branch'
 alias format-patch='git format-patch'
@@ -114,7 +113,6 @@ alias stash='git stash'
 alias submod='git submodule'
 alias switch='git switch'
 alias tag='git tag'
-alias up='git log --all --decorate --oneline | grep -B 1 $(git rev-parse --short HEAD) | awk '{print $1}' | head -1 | xargs -I {} git checkout {}'
 
 # k8s aliases
 alias annotate='kubectl annotate'
@@ -176,4 +174,16 @@ alias uncordon='kubectl uncordon'
 gitbranch()
 {
 	git branch --show-current 2> /dev/null | sed 's/\(.*\)/ (\1)/'
+}
+
+up()
+{
+  git log --all --decorate --oneline | grep -B 1 $(git rev-parse --short HEAD) |
+    awk '{print $1}' | head -1 | xargs -I {} git checkout {}
+}
+
+down()
+{
+  git log --all --decorate --oneline | grep -A 1 $(git rev-parse --short HEAD) |
+    awk '{print $1}' | tail -1 | xargs -I {} git checkout {}
 }
