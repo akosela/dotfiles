@@ -38,6 +38,7 @@ alias calicoctl='calicoctl --allow-version-mismatch'
 alias cl='clear'
 alias cd..='cd ..'
 alias d='docker'
+alias diff='diff -u'
 alias dotupdate='curl https://raw.githubusercontent.com/akosela/dotfiles/master/.bashrc > ~/.bashrc'
 alias dps="docker ps --format 'table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Command}}\t{{.Status}}'"
 alias e='ex'
@@ -62,6 +63,7 @@ alias u='uptime'
 alias v='vi'
 alias vim='vi -u ~/.exrc.white'
 alias x='exit'
+alias z='kill'
 
 # systemctl aliases
 alias disable='systemctl disable'
