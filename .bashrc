@@ -197,15 +197,9 @@ alias validate='terraform validate'
 alias workspace='terraform workspace'
 alias ws='terraform workspace'
 
-# functions
-#s()
-#{
-#	/usr/bin/ssh $1 -t "exec /bin/bash --rcfile ~/.bashrc.ak"
-#}
-
 gitbranch()
 {
-	git branch --show-current 2> /dev/null | sed 's/\(.*\)/ (\1)/'
+  git branch --show-current 2> /dev/null | sed 's/\(.*\)/ (\1)/'
 }
 
 up()
