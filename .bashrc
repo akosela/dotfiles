@@ -173,6 +173,30 @@ alias scale='kubectl scale'
 alias taint='kubectl taint'
 alias uncordon='kubectl uncordon'
 
+# terraform aliases
+alias console='terraform console'
+alias destroy='terraform destroy'
+alias force-unlock='terraform force-unlock'
+alias format='terraform fmt'
+alias graph='terraform graph'
+alias import='terraform import'
+alias login='terraform login'
+alias logout='terraform logout'
+alias output='terraform output'
+alias plan='terraform plan'
+alias providers='terraform providers'
+alias refresh='terraform refresh'
+alias show='terraform show'
+alias state='terraform state'
+alias taint='terraform taint'
+alias tapply='terrraform apply'
+alias tget='terraform get'
+alias tinit='terraform init'
+alias untaint='terraform untaint'
+alias validate='terraform validate'
+alias workspace='terraform workspace'
+alias ws='terraform workspace'
+
 # functions
 #s()
 #{
