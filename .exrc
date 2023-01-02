@@ -50,14 +50,14 @@ autocmd FileType c
   \ hi com ctermfg=lightblue |
   \ hi numbers ctermfg=white |
 autocmd FileType yaml
-  \ syn match item /.\+\w\+:$/ |
-  \ syn match item2 /.\+\w\+: / |
+  \ syn match item /.\+\w\+:$/ contains=com |
+  \ syn match item2 /.\+\w\+: / contains=com |
   \ syn match com /#.*$/ |
   \ syn match var /{{.*}}/ |
-  \ hi com ctermfg=red |
   \ hi item ctermfg=lightblue |
   \ hi item2 ctermfg=lightblue |
-  \ hi var ctermfg=white
+  \ hi var ctermfg=white |
+  \ hi com ctermfg=red
 
 if $_ == "/usr/bin/ex"
   set nu
