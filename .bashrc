@@ -69,6 +69,7 @@ alias x='exit'
 alias z='kill'
 
 # systemctl aliases
+alias daemon-reload='systemctl daemon-reload'
 alias disable='systemctl disable'
 alias enable='systemctl enable'
 alias mask='systemctl mask'
