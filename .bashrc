@@ -71,12 +71,14 @@ alias z='kill'
 # systemctl aliases
 alias disable='systemctl disable'
 alias enable='systemctl enable'
+alias mask='systemctl mask'
 alias reload='systemctl reload'
 alias restart='systemctl restart'
 alias start='systemctl start'
 alias status='systemctl status'
-alias sts='systemctl status'
 alias stop='systemctl stop'
+alias sts='systemctl status'
+alias unmask='systemctl unmask'
 
 # git aliases
 alias add='git add'
