@@ -220,8 +220,8 @@ down()
 dco()
 {
   if [[ $1 == 'up' || $1 == 'down' ]]; then
-    docker-compose --ansi=never $1
+    docker-compose --ansi=never $*
   else
-    docker-compose $1
+    docker-compose $*
   fi
 }
