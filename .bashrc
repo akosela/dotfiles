@@ -216,3 +216,12 @@ down()
   git log --all --decorate --oneline | grep -A 1 $(git rev-parse --short HEAD) |
     awk '{print $1}' | tail -1 | xargs -I {} git checkout {}
 }
+
+dco()
+{
+  if [[ $1 == 'up' || $1 == 'down' ]]; then
+    docker-compose --ansi=never $1
+  else
+    docker-compose $1
+  fi
+}
