@@ -219,7 +219,8 @@ down()
 
 dco()
 {
-  if [[ $1 == 'up' || $1 == 'down' ]]; then
+  if [[ $1 = 'up' || $1 = 'down' || $1 = 'restart' || $1 = 'pull' ||
+    $1 = 'push' || $1 = 'build' || $1 = 'create' ]]; then
     docker-compose --ansi=never $*
   else
     docker-compose $*
