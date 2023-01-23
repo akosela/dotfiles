@@ -38,6 +38,7 @@ alias calicoctl='calicoctl --allow-version-mismatch'
 alias cd..='cd ..'
 alias cl='clear'
 alias d='docker'
+alias dco='docker-compose --ansi=never'
 alias diff='diff -u'
 alias dotupdate='curl https://raw.githubusercontent.com/akosela/dotfiles/master/.bashrc > ~/.bashrc'
 alias dps="docker ps --format 'table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Command}}\t{{.Status}}'"
@@ -216,14 +217,4 @@ down()
 {
   git log --all --decorate --oneline | grep -A 1 $(git rev-parse --short HEAD) |
     awk '{print $1}' | tail -1 | xargs -I {} git checkout {}
-}
-
-dco()
-{
-  if [[ $1 = 'up' || $1 = 'down' || $1 = 'restart' || $1 = 'pull' ||
-    $1 = 'push' || $1 = 'build' || $1 = 'create' ]]; then
-    docker-compose --ansi=never $*
-  else
-    docker-compose $*
-  fi
 }
