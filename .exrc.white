@@ -23,6 +23,6 @@ filetype on
 autocmd FileType yaml setlocal sts=2 shiftwidth=2 expandtab
 
 if $_ == "/usr/bin/ex"
-	set nu
+  set nu
 endif
 let g:loaded_matchparen=1
