@@ -33,6 +33,7 @@ bind -m vi-insert "\C-l":clear-screen
 alias a='ansible'
 alias ai='ansible-inventory'
 alias ap='ansible-playbook'
+alias b='bat -fp --theme=DarkNeon'
 alias c='cat'
 alias calicoctl='calicoctl --allow-version-mismatch'
 alias cd..='cd ..'
