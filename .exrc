@@ -58,6 +58,8 @@ autocmd FileType yaml
   \ hi item2 ctermfg=lightblue |
   \ hi var ctermfg=white |
   \ hi com ctermfg=red
+autocmd FileType make
+  \ setlocal noexpandtab
 
 if $_ == "/usr/bin/ex"
   set nu
