@@ -48,7 +48,7 @@ autocmd FileType c
   \ hi string ctermfg=white |
   \ hi space_err ctermbg=red |
   \ hi com ctermfg=lightblue |
-  \ hi numbers ctermfg=white |
+  \ hi numbers ctermfg=white
 autocmd FileType yaml
   \ syn match item /.\+\w\+:$/ contains=com |
   \ syn match item2 /.\+\w\+: / contains=com |
