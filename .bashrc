@@ -59,7 +59,6 @@ alias l='less'
 alias ll='ls -Fl'
 alias ls='ls -F'
 alias n='netstat -pant'
-alias p='ping'
 alias pd='pwd'
 alias s='ssh'
 alias sb='sudo bash'
@@ -220,4 +219,9 @@ down()
 {
   git log --all --decorate --oneline | grep -A 1 $(git rev-parse --short HEAD) |
     awk '{print $1}' | tail -1 | xargs -I {} git checkout {}
+}
+
+p()
+{
+  ping -nc4 -s16 -W3 $1 | grep from
 }
