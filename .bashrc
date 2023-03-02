@@ -227,3 +227,8 @@ p()
 {
   ping -nc4 -s16 -W3 $1 | grep from
 }
+
+getn()
+{
+  kubectl get pod --all-namespaces --field-selector spec.nodeName=$1
+}
