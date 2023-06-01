@@ -70,6 +70,7 @@ alias v='vi'
 alias vim='vi -u ~/.exrc.white'
 alias x='exit'
 alias z='kill'
+alias zg='zgrep'
 
 # systemctl aliases
 alias daemon-reload='systemctl daemon-reload'
