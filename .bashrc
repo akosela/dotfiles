@@ -233,3 +233,9 @@ getn()
 {
   kubectl get pod --all-namespaces --field-selector spec.nodeName=$1
 }
+
+getc()
+{
+  kubectl get pod $1 -o jsonpath='{.spec.containers[*].name}'
+  echo
+}
