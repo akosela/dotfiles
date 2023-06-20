@@ -71,6 +71,7 @@ alias v='vi'
 alias vim='vi -u ~/.exrc.white'
 alias x='exit'
 alias z='kill'
+alias zc='zcat'
 alias zg='zgrep'
 
 # systemctl aliases
