@@ -228,7 +228,7 @@ down()
 
 p()
 {
-  ping -nc4 -s16 -W3 $1 | grep from
+  ping -nc2 -s16 -W3 $1 | grep from
 }
 
 getn()
