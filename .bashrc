@@ -1,11 +1,7 @@
 # ~/.bashrc
 
-if [ $HOSTNAME == moon.lan ]; then
-  export PS1='`gitbranch`\$ '
-else
-  export PS1='\h`gitbranch`\$ '
-fi
-
+#export PS1='`gitbranch`\$ '
+export PS1='\h `gitbranch`\$ '
 export PAGER=less
 export PATH=/bin:/usr/bin:/usr/sbin:/sbin:/usr/local/bin
 export GIT_PAGER='less -+S'
