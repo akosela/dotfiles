@@ -48,6 +48,7 @@ alias dps="docker ps --format 'table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Comm
 alias e='ex'
 alias f='find'
 alias g='grep'
+alias gc='grep --color'
 alias gdb='gdb -q -ex "set sty addr foreground none" -ex "set disassembly int"'
 alias gob='go build -ldflags="-s -w"'
 alias gor='go run'
