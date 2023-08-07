@@ -30,6 +30,7 @@ set -o vi
 bind -m vi-insert "\C-l":clear-screen
 
 # aliases
+alias ?='echo'
 alias a='ansible'
 alias ai='ansible-inventory'
 alias ap='ansible-playbook'
@@ -63,6 +64,7 @@ alias ll='ls -Fl'
 alias ls='ls -F'
 alias n='netstat -pant'
 alias pd='pwd'
+alias print='echo'
 alias s='ssh'
 alias sb='sudo bash'
 alias sudo='sudo '
