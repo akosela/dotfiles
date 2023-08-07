@@ -1,7 +1,11 @@
 # ~/.bashrc
 
-#export PS1='\h \$ '
-export PS1='\h`gitbranch` \$ '
+if [ $HOSTNAME == moon.lan ]; then
+  export PS1='`gitbranch`\$ '
+else
+  export PS1='\h`gitbranch`\$ '
+fi
+
 export PAGER=less
 export PATH=/bin:/usr/bin:/usr/sbin:/sbin:/usr/local/bin
 export GIT_PAGER='less -+S'
@@ -215,7 +219,7 @@ alias ws='terraform workspace'
 
 gitbranch()
 {
-  git branch --show-current 2> /dev/null | sed 's/\(.*\)/ (\1)/'
+  git branch --show-current 2> /dev/null | sed 's/\(.*\)/(\1) /'
 }
 
 up()
