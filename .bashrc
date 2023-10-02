@@ -236,7 +236,7 @@ down()
 
 p()
 {
-  ping -nc2 -s16 -W3 $1 | grep from
+  ping -nc2 -s16 -W3 $1 |grep -e icmp -e from
 }
 
 getn()
@@ -248,4 +248,9 @@ getc()
 {
   kubectl get pod $1 -o jsonpath='{.spec.containers[*].name}'
   echo
+}
+
+mkcd()
+{
+  mkdir -p $1 && cd $1
 }
