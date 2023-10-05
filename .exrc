@@ -59,7 +59,7 @@ autocmd FileType yaml
   \ hi var ctermfg=white |
   \ hi com ctermfg=red
 autocmd FileType make
-  \ setlocal noexpandtab
+  \ setlocal noexpandtab ts=8 sts=8
 
 if $_ == "/usr/bin/ex"
   set nu
