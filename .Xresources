@@ -8,10 +8,10 @@ Shift <Key> Right: scroll-forw(1,page) \n\
 <Key> Right: scroll-forw(1) \n\
 
 # fonts 
-#xterm*font: -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
-xterm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+xterm*font: -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
+#xterm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 #xterm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-1
-#xterm*font: -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
+##xterm*font: -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
 
 #xterm*vt100*geometry: 80x36
 xterm*vt100*geometry: 80x30
@@ -30,6 +30,7 @@ xterm*eightBitInput: false
 #xterm*foreground: rgb:00/00/00
 #xterm*background: rgb:ff/ff/ea
 #xterm*colorBD: rgb:00/00/00
+#xterm*colorBD: rgb:00/00/a8
 
 # amber monochrome colors
 #xterm*foreground: rgb:ff/cc/00
@@ -46,16 +47,22 @@ xterm*eightBitInput: false
 #xterm*background: rgb:08/49/7b
 #xterm*colorBD: white
 
+# amigaos 2.0 colors
+xterm*foreground: black
+xterm*background: lightgray
+xterm*colorBD: black
+
 # modern colors
 #xterm*foreground: gray
 #xterm*background: rgb:28/28/28
 #xterm*colorBD: rgb:fc/fc/fc
 
 # dos colors
-xterm*foreground: gray
-xterm*background: rgb:00/00/00
-xterm*colorBD: rgb:fc/fc/fc
+#term*foreground: gray
+#term*background: rgb:00/00/00
+#term*colorBD: rgb:fc/fc/fc
 
+# custom colors
 #xterm*foreground: gray
 #xterm*background: darkblue
 #xterm*colorBD: white
