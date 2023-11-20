@@ -1,0 +1,17 @@
+[user]
+name = Andy Kosela
+email = akosela@andykosela.com
+
+[color "branch"]
+current = blue
+remote = blue
+upstream = red
+
+[color "diff"]
+new = black
+commit = blue
+
+[color "status"]
+added = green
+changed = red
+untracked = red
