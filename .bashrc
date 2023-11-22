@@ -256,7 +256,7 @@ get()
     kubectl get secret |awk '{print $1, $2}' |column -t
     ;;
   service|svc)
-    kubectl get svc |awk '{print $1, $2, $3, $4, $5}' |column -t
+    kubectl get svc |awk '{print $1, $3, $5}' |column -t
     ;;
   deploy|deployment)
     kubectl get deployment |awk '{print $1, $2, $3, $4}' |column -t
