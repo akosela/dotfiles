@@ -261,6 +261,9 @@ get()
   deploy|deployment)
     kubectl get deployment |awk '{print $1, $2, $3, $4}' |column -t
     ;;
+  pvc)
+    kubectl get pvc |awk '{print $1, $2, $4, $5}' |column -t
+    ;;
   *)
     kubectl get $@
     ;;
