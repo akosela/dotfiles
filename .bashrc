@@ -164,7 +164,6 @@ alias events='kubectl alpha events'
 alias exe='kubectl exec -it'
 alias explain='kubectl explain'
 alias expose='kubectl expose'
-alias get='kubectl get'
 alias getj='kubectl get -ojson'
 alias getl='kubectl get --show-labels'
 alias gety='kubectl get -oyaml'
@@ -239,6 +238,33 @@ down()
 p()
 {
   ping -nc2 -s16 -W3 $1 |grep -e icmp -e from
+}
+
+get()
+{
+  case "$@" in
+  node)
+    kubectl get node |awk '{print $1, $2, $3}' |column -t
+    ;;
+  pod)
+    kubectl get pod |awk '{print $1, $2, $3, $4}' |column -t
+    ;;
+  vs|volumesnapshot)
+    kubectl get volumesnapshot |awk '{print $1, $2}' |column -t
+    ;;
+  secret)
+    kubectl get secret |awk '{print $1, $2}' |column -t
+    ;;
+  service|svc)
+    kubectl get svc |awk '{print $1, $2, $3, $4, $5}' |column -t
+    ;;
+  deploy|deployment)
+    kubectl get deployment |awk '{print $1, $2, $3, $4}' |column -t
+    ;;
+  *)
+    kubectl get $@
+    ;;
+  esac
 }
 
 getn()
