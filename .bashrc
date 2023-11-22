@@ -252,11 +252,14 @@ get()
   vs|volumesnapshot)
     kubectl get volumesnapshot |awk '{print $1, $2}' |column -t
     ;;
-  secret)
+  sec|secret)
     kubectl get secret |awk '{print $1, $2}' |column -t
     ;;
-  service|svc)
+  svc|service)
     kubectl get svc |awk '{print $1, $3, $5}' |column -t
+    ;;
+  ss|sealedsecret)
+    kubectl get sealedsecret
     ;;
   deploy|deployment)
     kubectl get deployment |awk '{print $1, $2, $3, $4}' |column -t
