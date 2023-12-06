@@ -245,28 +245,28 @@ p()
 get()
 {
   case "$@" in
-  node)
+  node*)
     kubectl get node |awk '{print $1, $2, $3}' |column -t
     ;;
-  pod)
+  pod*)
     kubectl get pod |awk '{print $1, $2, $3, $4}' |column -t
     ;;
-  vs|volumesnapshot)
+  vs*|volumesnapshot*)
     kubectl get volumesnapshot |awk '{print $1, $2}' |column -t
     ;;
-  sec|secret)
+  sec*|secret*)
     kubectl get secret |awk '{print $1, $2}' |column -t
     ;;
-  svc|service)
+  svc*|service*)
     kubectl get svc |awk '{print $1, $3, $5}' |column -t
     ;;
-  ss|sealedsecret)
+  ss*|sealedsecret*)
     kubectl get sealedsecret
     ;;
-  deploy|deployment)
+  deploy*|deployment*)
     kubectl get deployment |awk '{print $1, $2, $3, $4}' |column -t
     ;;
-  pvc)
+  pvc*)
     kubectl get pvc |awk '{print $1, $2, $4, $5}' |column -t
     ;;
   *)
