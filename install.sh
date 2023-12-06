@@ -11,6 +11,7 @@ curl -fsSL $url/.exrc.white > .exrc.white.ak
 curl -fsSL $url/.mailrc > .mailrc.ak
 curl -fsSL $url/.tmux.conf > .tmux.conf.ak
 curl -fsSL $url/.gitconfig > .gitconfig.ak
+curl -fsSL $url/.inputrc > .inputrc.ak
 
 if [ -e .Xresources ]; then
   cp .Xresources .Xresources.bak
@@ -51,5 +52,10 @@ if [ -e .gitconfig ]; then
   cp .gitconfig .gitconfig.bak
 fi
 mv .gitconfig.ak .gitconfig
+
+if [ -e .inputrc ]; then
+  cp .inputrc .inputrc.bak
+fi
+mv .inputrc.ak .inputrc
 
 echo "github.com/akosela/dotfiles installed successfully."
