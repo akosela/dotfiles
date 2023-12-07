@@ -245,32 +245,32 @@ p()
 get()
 {
   case "$@" in
-  node*)
+  node)
     kubectl get node |awk '{print $1, $2, $3}' |column -t
     ;;
-  pod*)
-    kubectl get pod |awk '{print $1, $2, $3, $4}' |column -t
+  pod)
+    kubectl get "$@" |awk '{print $1, $2, $3, $4}' |column -t
     ;;
-  vs*|volumesnapshot*)
-    kubectl get volumesnapshot |awk '{print $1, $2}' |column -t
+  vs|volumesnapshot)
+    kubectl get "$@" |awk '{print $1, $2}' |column -t
     ;;
-  sec*|secret*)
-    kubectl get secret |awk '{print $1, $2}' |column -t
+  secret)
+    kubectl get "$@" |awk '{print $1, $2}' |column -t
     ;;
-  svc*|service*)
-    kubectl get svc |awk '{print $1, $3, $5}' |column -t
+  svc|service)
+    kubectl get "$@" |awk '{print $1, $3, $5}' |column -t
     ;;
-  ss*|sealedsecret*)
-    kubectl get sealedsecret
+  sealedsecret)
+    kubectl get "$@"
     ;;
-  deploy*|deployment*)
-    kubectl get deployment |awk '{print $1, $2, $3, $4}' |column -t
+  deploy|deployment)
+    kubectl get "$@" |awk '{print $1, $2, $3, $4}' |column -t
     ;;
-  pvc*)
-    kubectl get pvc |awk '{print $1, $2, $4, $5}' |column -t
+  pvc)
+    kubectl get "$@" |awk '{print $1, $2, $4, $5}' |column -t
     ;;
   *)
-    kubectl get $@
+    kubectl get "$@"
     ;;
   esac
 }
