@@ -66,6 +66,7 @@ alias k='kubectl'
 alias l='less'
 alias ll='ls -Fl'
 alias ls='ls -F'
+alias lsd="ls -d */ | sed 's/\/$//g' | column -c80"
 alias n='netstat -pant'
 alias pd='pwd'
 alias print='echo'
