@@ -297,6 +297,16 @@ laststate()
   kubectl describe pod $1 |g -A4 'Last State:'
 }
 
+res()
+{
+  kubectl describe pod $1 |sed -ne '/Image:/,+p' -e '/Limits:/,+5p' |grep -ve Liveness -e Environment
+}
+
+images()
+{
+  kubectl describe pod $1 |grep -e ^Name: -e Image:
+}
+
 mkcd()
 {
   mkdir -p $1 && cd $1
