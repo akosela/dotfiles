@@ -287,6 +287,11 @@ getc()
   echo
 }
 
+util()
+{
+  kubectl describe node $1 |sed -ne '/Name:/,+p' -e '/Resource/,+6p' |grep -v Events
+}
+
 mkcd()
 {
   mkdir -p $1 && cd $1
