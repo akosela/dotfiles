@@ -289,17 +289,21 @@ getc()
 
 util()
 {
-  kubectl describe node $1 |sed -ne '/Name:/,+p' -e '/Resource/,+6p' |grep -v Events
+  kubectl describe node $1 |sed -ne '/Name:/,+p' -e '/Resource/,+6p' |
+    grep -v Events
 }
 
 laststate()
 {
-  kubectl describe pod $1 |g -A4 'Last State:'
+  kubectl describe pod $1 |
+    sed -ne '/^Name:/,+p' -e '/Image:/,+p' -e '/Last State:/,+4p'
 }
 
 res()
 {
-  kubectl describe pod $1 |sed -ne '/Image:/,+p' -e '/Limits:/,+5p' |grep -ve Liveness -e Environment
+  kubectl describe pod $1 |
+    sed -ne '/^Name:/,+p' -e '/Image:/,+p' -e '/Limits:/,+5p' |
+    grep -ve Liveness -e Environment
 }
 
 images()
