@@ -292,6 +292,11 @@ util()
   kubectl describe node $1 |sed -ne '/Name:/,+p' -e '/Resource/,+6p' |grep -v Events
 }
 
+laststate()
+{
+  kubectl describe pod $1 |g -A4 'Last State:'
+}
+
 mkcd()
 {
   mkdir -p $1 && cd $1
