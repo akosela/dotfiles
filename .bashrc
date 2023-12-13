@@ -172,6 +172,7 @@ alias getl='kubectl get --show-labels'
 alias gety='kubectl get -oyaml'
 alias getall='kubectl get all,cm,secret,ing'
 alias gettaint='kubectl get node -o custom-columns=NAME:.metadata.name,TAINTS:.spec.taints'
+alias img='image'
 alias k='kubectl'
 alias kcp='kubectl cp'
 alias kdiff='kubectl diff'
@@ -306,7 +307,7 @@ res()
     grep -ve Liveness -e Environment
 }
 
-images()
+image()
 {
   kubectl describe pod $1 |grep -e ^Name: -e Image:
 }
