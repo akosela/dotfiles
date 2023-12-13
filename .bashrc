@@ -312,6 +312,13 @@ image()
   kubectl describe pod $1 |grep -e ^Name: -e Image:
 }
 
+labels()
+{
+  kubectl get $1 $2 -ojsonpath='{"annotations:\n"}{.metadata.annotations}{"\nlabels:\n"}{.metadata.labels}{"\n"}' |
+    sed 's/:/: /g ; s/.*,/  &/' | tr -d '{}"' |
+    cut -d, --output-delimiter=$'\n  ' -f1-
+}
+
 mkcd()
 {
   mkdir -p $1 && cd $1
