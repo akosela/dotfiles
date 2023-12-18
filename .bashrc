@@ -302,14 +302,13 @@ laststate()
 
 res()
 {
-  kubectl describe pod $1 |
-    sed -ne '/^Name:/,+p' -e '/Image:/,+p' -e '/Limits:/,+5p' |
-    grep -ve Liveness -e Environment
+  kubectl describe pod $1 | grep -B1 -A5 -e 'Container ID' -e Limits: |
+    grep -vE 'Container ID|Port|Image|Image ID|Command|Restart Count|Liveness|Environment|--'
 }
 
 image()
 {
-  kubectl describe pod $1 |grep -e ^Name: -e Image:
+  kubectl describe pod $1 |grep -e Image: |sort -u
 }
 
 labels()
