@@ -303,12 +303,12 @@ laststate()
 res()
 {
   kubectl describe pod $1 | grep -B1 -A5 -e 'Container ID' -e Limits: |
-    grep -vE 'Container ID|Port|Image|Image ID|Command|Restart Count|Liveness|Environment|--'
+    grep -vE 'Container ID|Port|Image|Image ID|Command|Restart Count|Liveness|Environment|--|Args:|State:|SeccompProfile'
 }
 
 image()
 {
-  kubectl describe pod $1 |grep -e Image: |sort -u
+  kubectl describe pod $1 |grep -e Image: |sort -nu
 }
 
 labels()
