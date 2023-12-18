@@ -296,8 +296,8 @@ util()
 
 laststate()
 {
-  kubectl describe pod $1 |
-    sed -ne '/^Name:/,+p' -e '/Image:/,+p' -e '/Last State:/,+4p'
+  kubectl describe pod $1 | grep -B2 -A4 -e 'Image:' -e 'Last State:' |
+    grep -vE 'Container ID|Port|Image|Image ID|Args:|Command:|--'
 }
 
 res()
