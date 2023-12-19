@@ -45,7 +45,7 @@ alias ...='cd ../..'
 alias cl='clear'
 alias d='docker'
 alias dco='docker-compose --ansi=never'
-alias diff='diff -u'
+alias diff='diff --color=always -u'
 alias dotupdate='curl https://raw.githubusercontent.com/akosela/dotfiles/master/.bashrc > ~/.bashrc'
 alias dps="docker ps --format 'table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Command}}\t{{.Status}}'"
 alias e='ex'
