@@ -322,3 +322,8 @@ mkcd()
 {
   mkdir -p $1 && cd $1
 }
+
+dl()
+{
+  diff --color=always -u -- $1 $2 |less
+}
