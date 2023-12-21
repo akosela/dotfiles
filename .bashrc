@@ -1,6 +1,9 @@
 # ~/.bashrc
 
-#export PS1='`gitbranch`\$ '
+if [ -z "$PS1" ]; then
+  shopt -s expand_aliases
+fi
+
 export PS1='\h `gitbranch`\$ '
 export PAGER=less
 export PATH=/bin:/usr/bin:/usr/sbin:/sbin:/usr/local/bin
