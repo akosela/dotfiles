@@ -174,7 +174,6 @@ alias drain='kubectl drain'
 alias edit='kubectl edit'
 alias events='kubectl events'
 alias exe='kubectl exec'
-alias exesh='kubectl exec -it'
 alias explain='kubectl explain'
 alias expose='kubectl expose'
 alias getj='kubectl get -ojson'
@@ -341,4 +340,9 @@ mkcd()
 dl()
 {
   diff --color=always -u -- $1 $2 |less
+}
+
+exesh()
+{
+  kubectl exec -it $1 -- /bin/bash
 }
