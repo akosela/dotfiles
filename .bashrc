@@ -327,6 +327,11 @@ labels()
     cut -d, --output-delimiter=$'\n  ' -f1-
 }
 
+vols()
+{
+  kubectl get pod $1 -ojsonpath='{range .spec.volumes[*]}{.name}{"\n"}{"  pvc: "}{.persistentVolumeClaim.claimName}{"\n"}{end}'
+}
+
 mkcd()
 {
   mkdir -p $1 && cd $1
