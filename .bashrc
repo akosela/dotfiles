@@ -71,6 +71,7 @@ alias j='journalctl'
 alias k='kubectl'
 alias l='less'
 alias ll='ls -Fl'
+alias llh='ls -Flh'
 alias ls='ls -F'
 alias lsd="ls -d */ | sed 's/\/$//g' | column -c80"
 alias n='netstat -pant'
