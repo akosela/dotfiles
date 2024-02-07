@@ -364,14 +364,17 @@ exesh()
 
 tls()
 {
-  openssl s_client -connect $1 -showcerts < /dev/null 2>&1 |
-    openssl x509 -noout -text
+  openssl s_client -connect $1 < /dev/null 2>&1 | openssl x509 -noout -text
 }
 
 tlsend()
 {
-  openssl s_client -connect $1 -showcerts < /dev/null 2>&1 |
-    openssl x509 -noout -enddate
+  openssl s_client -connect $1 < /dev/null 2>&1 | openssl x509 -noout -enddate
+}
+
+tlspem()
+{
+  openssl s_client -connect $1 < /dev/null 2>&1 | openssl x509 -outform pem
 }
 
 tlsprint()
