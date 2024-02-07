@@ -361,3 +361,31 @@ exesh()
 {
   kubectl exec -it $1 -- /bin/bash
 }
+
+tls()
+{
+  openssl s_client -connect $1 -showcerts < /dev/null 2>&1 |
+    openssl x509 -noout -text
+}
+
+tlsend()
+{
+  openssl s_client -connect $1 -showcerts < /dev/null 2>&1 |
+    openssl x509 -noout -enddate
+}
+
+tlsprint()
+{
+  openssl x509 -in $1 -noout -text
+}
+
+tlsprintend()
+{
+  openssl x509 -in $1 -noout -enddate
+}
+
+tlscheck()
+{
+  openssl x509 -noout -modulus -in $1 | openssl md5
+  openssl rsa -noout -modulus -in $2 | openssl md5
+}
