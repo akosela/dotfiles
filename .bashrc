@@ -392,6 +392,15 @@ tlspem()
   IFS=$oldifs
 }
 
+tlsv()
+{
+  oldifs=$IFS
+  IFS=":"
+  args=($*)
+  openssl s_client -connect ${args[0]}:${args[1]:-443} < /dev/null 2>&1
+  IFS=$oldifs
+}
+
 tlsprint()
 {
   openssl x509 -in $1 -noout -text
