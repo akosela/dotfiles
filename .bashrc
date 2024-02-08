@@ -364,17 +364,32 @@ exesh()
 
 tls()
 {
-  openssl s_client -connect $1 < /dev/null 2>&1 | openssl x509 -noout -text
+  oldifs=$IFS
+  IFS=":"
+  args=($*)
+  openssl s_client -connect ${args[0]}:${args[1]:-443} < /dev/null 2>&1 |
+    openssl x509 -noout -text
+  IFS=$oldifs
 }
 
 tlsend()
 {
-  openssl s_client -connect $1 < /dev/null 2>&1 | openssl x509 -noout -enddate
+  oldifs=$IFS
+  IFS=":"
+  args=($*)
+  openssl s_client -connect ${args[0]}:${args[1]:-443} < /dev/null 2>&1 |
+    openssl x509 -noout -enddate
+  IFS=$oldifs
 }
 
 tlspem()
 {
-  openssl s_client -connect $1 < /dev/null 2>&1 | openssl x509 -outform pem
+  oldifs=$IFS
+  IFS=":"
+  args=($*)
+  openssl s_client -connect ${args[0]}:${args[1]:-443} < /dev/null 2>&1 |
+    openssl x509 -outform pem
+  IFS=$oldifs
 }
 
 tlsprint()
