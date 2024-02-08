@@ -354,7 +354,7 @@ mkcd()
 
 dl()
 {
-  diff --color=always -u -- $1 $2 |less
+  diff -- $1 $2 |less
 }
 
 exesh()
