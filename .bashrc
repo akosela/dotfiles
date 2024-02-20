@@ -153,10 +153,13 @@ alias tag='git tag'
 
 # k8s aliases
 alias annotate='kubectl annotate'
+alias ann='kubectl annotate'
 alias api-resources='kubectl api-resources'
 alias api-versions='kubectl api-versions'
 alias apply='kubectl apply'
+alias app='kubectl apply'
 alias attach='kubectl attach'
+alias att='kubectl attach'
 alias auth='kubectl auth'
 alias autoscale='kubectl autoscale'
 alias cert='kubectl certificate'
@@ -165,22 +168,26 @@ alias completion='kubectl completion'
 alias config='kubectl config'
 alias cordon='kubectl cordon'
 alias create='kubectl create'
+alias cre='kubectl create'
 alias ctx='kubectx'
 alias debug='kubectl debug'
+alias deb='kubectl debug'
 alias del='kubectl delete'
 alias delete='kubectl delete'
 alias des='kubectl describe'
 alias describe='kubectl describe'
 alias drain='kubectl drain'
 alias edit='kubectl edit'
-alias events='kubectl events'
+alias event='kubectl events'
 alias exe='kubectl exec'
 alias explain='kubectl explain'
+alias exp='kubectl explain'
 alias expose='kubectl expose'
 alias gcm='get cm'
 alias gcnp='get cnp'
 alias gd='get deployment'
 alias gds='get ds'
+alias ge='eve'
 alias getall='kubectl get all,cm,secret,ing'
 alias getj='kubectl get -ojson'
 alias getl='kubectl get --show-labels'
@@ -203,22 +210,30 @@ alias img='image'
 alias k='kubectl'
 alias kcp='kubectl cp'
 alias kdiff='kubectl diff'
+alias kdif='kubectl diff'
 alias kpatch='kubectl patch'
 alias kset='kubectl set'
 alias ktail='kubectl tail'
 alias ktop='kubectl top'
 alias ktree='kubectl tree'
 alias kustomize='kubectl kustomize'
+alias kus='kubectl kustomize'
 alias kwait='kubectl wait'
 alias label='kubectl label'
+alias lab='kubectl label'
 alias logs='kubectl logs'
 alias ns='kubens'
 alias options='kubectl options'
+alias opt='kubectl options'
+alias pat='kubectl patch'
 alias plugin='kubectl plugin'
 alias port-forward='kubectl port-forward'
+alias pf='kubectl port-forward'
 alias proxy='kubectl proxy'
 alias replace='kubectl replace'
+alias rep='kubectl replace'
 alias rollout='kubectl rollout'
+alias rol='kubectl rollout'
 alias run='kubectl run'
 alias scale='kubectl scale'
 alias taint='kubectl taint'
@@ -350,6 +365,15 @@ labels()
 vols()
 {
   kubectl get pod $1 -ojsonpath='{range .spec.volumes[*]}{.name}{"\n"}{"  pvc: "}{.persistentVolumeClaim.claimName}{"\n"}{end}'
+}
+
+eve()
+{
+  if [ ! -z $1 ]; then
+    kubectl events --for pod/$1
+  else
+    kubectl events
+  fi
 }
 
 mkcd()
