@@ -169,7 +169,8 @@ alias config='kubectl config'
 alias cordon='kubectl cordon'
 alias create='kubectl create'
 alias cre='kubectl create'
-alias ctx='kubectx'
+alias ctl='kubectx'
+alias ct-='kubectl -'
 alias debug='kubectl debug'
 alias deb='kubectl debug'
 alias del='kubectl delete'
@@ -222,7 +223,8 @@ alias kwait='kubectl wait'
 alias label='kubectl label'
 alias lab='kubectl label'
 alias logs='kubectl logs'
-alias ns='kubens'
+alias nsl='kubens'
+alias ns-='kubens -'
 alias options='kubectl options'
 alias opt='kubectl options'
 alias pat='kubectl patch'
@@ -444,4 +446,22 @@ tlscheck()
 {
   openssl x509 -noout -modulus -in $1 | openssl md5
   openssl rsa -noout -modulus -in $2 | openssl md5
+}
+
+ct()
+{
+  if [ ! -z $1 ]; then
+    kubectx $1
+  else
+    kubectx -c
+  fi
+}
+
+ns()
+{
+  if [ ! -z $1 ]; then
+    kubens $1
+  else
+    kubens -c
+  fi
 }
