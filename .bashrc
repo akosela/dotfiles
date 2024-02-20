@@ -327,11 +327,10 @@ laststate()
 
 res()
 {
+  kubectl top pod $1
   kubectl describe pod $1 |
     grep -B1 -A3 -e 'Container ID' -e Requests: -e Limits: |
     grep -vE 'Container ID|Port|Image|Image ID|Command|Restart Count|Liveness|Environment|--|Args:|State:|SeccompProfile'
-  echo ""
-  echo "  USAGE: `kubectl top pod $1 |grep -v NAME`"
 }
 
 image()
