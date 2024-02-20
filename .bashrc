@@ -327,7 +327,8 @@ laststate()
 
 res()
 {
-  kubectl describe pod $1 | grep -B1 -A5 -e 'Container ID' -e Limits: |
+  kubectl describe pod $1 |
+    grep -B1 -A3 -e 'Container ID' -e Requests: -e Limits: |
     grep -vE 'Container ID|Port|Image|Image ID|Command|Restart Count|Liveness|Environment|--|Args:|State:|SeccompProfile'
 }
 
