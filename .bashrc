@@ -333,6 +333,13 @@ getn()
   kubectl get pod --all-namespaces --field-selector spec.nodeName=$1
 }
 
+getp()
+{
+  kubectl get pod --all-namespaces \
+    -ojsonpath='{range .items[?(@.spec.nodeName)]}{.spec.nodeName}{"\n"}{end}' |
+    sort |uniq -c |sort -rn
+}
+
 getc()
 {
   kubectl get pod $1 -o jsonpath='{.spec.containers[*].name}'
