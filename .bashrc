@@ -442,7 +442,7 @@ tlsv()
   oldifs=$IFS
   IFS=":"
   args=($*)
-  openssl s_client -connect ${args[0]}:${args[1]:-443} < /dev/null 2>&1
+  openssl s_client -connect ${args[0]}:${args[1]:-443} -showcerts < /dev/null 2>&1
   IFS=$oldifs
 }
 
