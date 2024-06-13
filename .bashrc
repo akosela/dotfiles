@@ -349,8 +349,7 @@ getc()
 util()
 {
   kubectl describe node $1 |
-    sed -ne '/Capacity:/,+13p' -e '/Name:/,+p' -e '/Resource/,+6p' |
-    grep -v Events
+    sed -ne '/Name:/,+p' -e '/Capacity:/,+13p' -e '/Resource/,+6p'
 }
 
 laststate()
