@@ -392,7 +392,7 @@ eve()
   fi
 }
 
-getip ()
+getip()
 {
     kubectl get pods -o jsonpath='{range .items[*]}{.status.podIP}{"\t"}{.metadata.name}{"\n"}{end}'
 }
