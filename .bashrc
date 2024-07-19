@@ -392,6 +392,11 @@ eve()
   fi
 }
 
+getip ()
+{
+    kubectl get pods -o jsonpath='{range .items[*]}{.status.podIP}{"\t"}{.metadata.name}{"\n"}{end}'
+}
+
 mcd()
 {
   mkdir -p $1 && cd $1
