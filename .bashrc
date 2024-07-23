@@ -311,7 +311,7 @@ get()
     kubectl get "$@" |awk '{print $1, $2}' |column -t
     ;;
   *svc*|*service*)
-    kubectl get "$@" |awk '{print $1, $3, $5}' |column -t
+    kubectl get "$@" |awk '{print $1, $3, $4, $5}' |column -t
     ;;
   *sealedsecret*)
     kubectl get "$@"
