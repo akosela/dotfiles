@@ -334,6 +334,11 @@ getn()
   kubectl get pod --all-namespaces --field-selector spec.nodeName=$1
 }
 
+getnode ()
+{
+  kubectl describe pod $1 | grep Node:
+}
+
 getp()
 {
   kubectl get pod --all-namespaces \
