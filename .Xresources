@@ -48,14 +48,14 @@ xterm*eightBitInput: false
 #xterm*colorBD: white
 
 # amigaos 2.0 colors
-xterm*foreground: black
-xterm*background: rgb:e0/e0/e0
-xterm*colorBD: black
-
-# zx spectrum colors
 #xterm*foreground: black
 #xterm*background: rgb:e0/e0/e0
 #xterm*colorBD: black
+
+# zx spectrum colors
+xterm*foreground: black
+xterm*background: rgb:e0/e0/e0
+xterm*colorBD: black
 
 # modern colors
 #xterm*foreground: gray

@@ -8,7 +8,7 @@ remote = blue
 upstream = red
 
 [color "diff"]
-new = black
+new = green
 commit = blue
 
 [color "status"]

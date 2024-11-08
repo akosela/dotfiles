@@ -6,7 +6,7 @@ fi
 
 export PS1='\h `gitbranch`\$ '
 export PAGER=less
-export PATH=/bin:/usr/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=/opt/local/libexec/gnubin:/opt/local/bin:/bin:/usr/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/opt/local/sbin:~/data/prog/go/bin:~/.krew/bin
 export GIT_PAGER='less -+S'
 export HISTSIZE=2000
 export HISTCONTROL=ignoredups
