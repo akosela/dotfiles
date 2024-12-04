@@ -206,6 +206,7 @@ alias gi='get ing'
 alias gj='kubectl get -ojson'
 alias gn='get node'
 alias gp='get pod'
+alias gperr='kubectl get pods -A  --field-selector=status.phase!=Running,status.phase!=Succeeded'
 alias gpv='get pv'
 alias gpvc='get pvc'
 alias grs='get rs'
@@ -393,9 +394,15 @@ vols()
 eve()
 {
   if [ ! -z $1 ]; then
-    kubectl events --for pod/$1
+    if [ ! -z $3 ]; then
+      kubectl events --for pod/$1 -n $3
+    elif [ ! -z $2 ]; then
+      kubectl events -n $2
+    else
+      kubectl events --for pod/$1
+    fi
   else
-    kubectl events
+      kubectl events
   fi
 }
 
