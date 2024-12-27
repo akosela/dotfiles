@@ -391,6 +391,7 @@ vols()
   kubectl get pod $1 -ojsonpath='{range .spec.volumes[*]}{.name}{"\n"}{"  pvc: "}{.persistentVolumeClaim.claimName}{"\n"}{end}'
 }
 
+# eve <pod> -n <ns>
 eve()
 {
   if [ ! -z $1 ]; then
