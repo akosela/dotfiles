@@ -509,3 +509,9 @@ ns()
     kubens -c
   fi
 }
+
+ceph()
+{
+  tools=`kubectl get pod -n rook-ceph |grep tools |awk '{print $1}'`
+  kubectl exec -it $tools -n rook-ceph -- ceph $1 $2
+}
