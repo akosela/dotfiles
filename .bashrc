@@ -80,6 +80,7 @@ alias lsd="ls -d */ | sed 's/\/$//g' | column -c80"
 alias m='man'
 alias md='mkdir'
 alias n='netstat -pant'
+alias p='echo'
 alias print='echo'
 alias o='pwd'
 alias r='ip r'
@@ -294,7 +295,7 @@ down()
     awk '{print $1}' | tail -1 | xargs -I {} git checkout {}
 }
 
-p()
+png()
 {
   ping -nc2 -s16 -W3 $1 |grep -e icmp -e from
 }
