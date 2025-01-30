@@ -528,3 +528,14 @@ logsall ()
 {
     kubectl logs --prefix -l app.kubernetes.io/instance=$1
 }
+
+enc()
+{
+  gpg --cipher-algo AES256 --s2k-digest-algo SHA512 --s2k-count 65011712 \
+    -c -a --pinentry-mode loopback --no-symkey-cache -o $1.gpg $1
+}
+
+dec()
+{
+  gpg --pinentry-mode loopback --no-symkey-cache -o ${1%.*} -d $1
+}
