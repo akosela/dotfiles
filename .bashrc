@@ -75,6 +75,7 @@ alias k='kill'
 alias l='less'
 alias ll='ls -Fl'
 alias llh='ls -Flh'
+alias lr='luarocks'
 alias ls='ls -F'
 alias lsd="ls -d */ | sed 's/\/$//g' | column -c80"
 alias m='man'
