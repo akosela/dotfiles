@@ -75,7 +75,6 @@ alias k='kill'
 alias l='less'
 alias ll='ls -Fl'
 alias llh='ls -Flh'
-alias lr='luarocks'
 alias ls='ls -F'
 alias lsd="ls -d */ | sed 's/\/$//g' | column -c80"
 alias m='man'
@@ -568,7 +567,7 @@ lr()
       if [ "$1" == "lint" ]; then
         shift; luarocks lint $@
       else
-        shift; luarocks list $@
+        shift; luarocks list --porcelain $@
       fi
       ;;
     m)
@@ -590,7 +589,7 @@ lr()
       if [[ "$1" =~ ^sh.* ]]; then
         shift; luarocks show $@
       else
-        shift; luarocks search $@
+        shift; luarocks search --porcelain $@
       fi
       ;;
     t)
