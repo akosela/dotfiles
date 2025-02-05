@@ -540,3 +540,76 @@ dec()
 {
   gpg --pinentry-mode loopback --no-symkey-cache -o ${1%.*} -d $1
 }
+
+lr()
+{
+  case "$@" in
+    b*)
+      shift; luarocks build $@ ;;
+    c)
+      luarocks config ;;
+    d*)
+      if [ "$1" == "doc" ]; then
+        shift; luarocks doc $@
+      else
+        shift; luarocks download $@
+      fi
+      ;;
+    h)
+      luarocks help ;;
+    i*)
+      if [ "$1" == "init" ]; then
+        luarocks init
+      else
+        shift; luarocks install $@
+      fi
+      ;;
+    l*)
+      if [ "$1" == "lint" ]; then
+        shift; luarocks lint $@
+      else
+        shift; luarocks list $@
+      fi
+      ;;
+    m)
+      luarocks make ;;
+    nv*)
+      shift; luarocks new_version $@ ;;
+    p*)
+      if [ "$1" == "purge" ]; then
+        shift; luarocks purge $@
+      elif [[ "$1" =~ ^p.*k ]]; then
+        shift; luarocks pack $@
+      else
+        luarocks path
+      fi
+      ;;
+    r*)
+      shift; luarocks remove $@ ;;
+    s*)
+      if [[ "$1" =~ ^sh.* ]]; then
+        shift; luarocks show $@
+      else
+        shift; luarocks search $@
+      fi
+      ;;
+    t)
+      shift; luarocks test $@ ;;
+    u*)
+      if [[ "$1" =~ u.*k ]]; then
+        shift; luarocks unpack $@
+      else
+        shift; luarocks upload $@
+      fi
+      ;;
+    w*)
+      if [ "$1" == "write_rockspec" ]; then
+        shift; luarocks write_rockspec $@
+      else
+        shift; luarocks which $@
+      fi
+      ;;
+    *)
+      luarocks ;;
+  esac
+}
