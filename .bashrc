@@ -613,3 +613,18 @@ lr()
       luarocks ;;
   esac
 }
+
+h2d()
+{
+  echo $(( 0x$1 ))
+}
+
+d2h()
+{
+  printf "0x%x\n" $1
+}
+
+h2b()
+{
+  echo "obase=2; ibase=16; `echo $1 | tr 'a-f' 'A-F'`" | bc
+}
