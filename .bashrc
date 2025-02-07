@@ -537,7 +537,7 @@ dec()
   gpg --pinentry-mode loopback --no-symkey-cache -o ${1%.*} -d $1
 }
 
-lr()
+rocks()
 {
   case "$@" in
     b*)
