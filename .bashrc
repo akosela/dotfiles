@@ -4,8 +4,8 @@ if [ -z "$PS1" ]; then
   shopt -s expand_aliases
 fi
 
-export PS1='\h `[ -e ".git" ] && git branch --show-current 2>/dev/null | sed "s/\(.*\)/(\1) /"`\$ '
-#export PS1='`[ "$(id -u)" -eq 0 ] && echo "\u@"`\h `[ -e ".git" ] && git branch --show-current 2>/dev/null | sed "s/\(.*\)/(\1) /"``echo -e "\\u2862"` '
+PS1='\h `[ -e ".git" ] && git branch --show-current | sed "s/\(.*\)/(\1) /"`\$ '
+export PS1
 export PAGER=less
 export PATH=/opt/local/libexec/gnubin:/opt/local/bin:/bin:/usr/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/opt/local/sbin:~/data/prog/go/bin:~/.krew/bin
 export GIT_PAGER='less -+S'
