@@ -386,6 +386,13 @@ labels()
     cut -d, --output-delimiter=$'\n  ' -f1-
 }
 
+gl()
+{
+  kubectl get $1 $2 -ojsonpath='{"labels:\n"}{.metadata.labels}{"\n"}' |
+    sed 's/:/: /g ; s/.*,/  &/' | tr -d '{}"' |
+    cut -d, --output-delimiter=$'\n  ' -f1-
+}
+
 vols()
 {
   kubectl get pod $1 -ojsonpath='{range .spec.volumes[*]}{.name}{"\n"}{"  pvc: "}{.persistentVolumeClaim.claimName}{"\n"}{end}'
