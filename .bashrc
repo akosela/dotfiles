@@ -220,7 +220,7 @@ alias gs='get svc'
 alias gse='get secret'
 alias gss='get sealedsecret'
 alias gsts='get sts'
-alias gv='get vs'
+alias gvs='get vs'
 alias gy='kubectl get -oyaml'
 alias img='image'
 alias kcp='kubectl cp'
@@ -393,7 +393,7 @@ gl()
     cut -d, --output-delimiter=$'\n  ' -f1-
 }
 
-vols()
+gv()
 {
   kubectl get pod $1 -ojsonpath='{range .spec.volumes[*]}{.name}{"\n"}{"  pvc: "}{.persistentVolumeClaim.claimName}{"\n"}{end}'
 }
