@@ -214,6 +214,7 @@ alias gpwide="kubectl get pod -owide |awk '{print \$1, \$2, \$3, \$4, \$5, \$7}'
 alias gperr='kubectl get pods -A |grep -E "NAMESPACE|CrashLoopBackOff|Error|ImagePullBackOff|ErrImagePull|Evicted|Failed|ContainerCreating|ContainerStatusUnknown|Pending|Terminating"'
 alias gpv='get pv'
 alias gpvc='get pvc'
+alias gpw="kubectl get pod -owide |awk '{print \$1, \$2, \$3, \$4, \$5, \$7}'| column -t"
 alias grs='get rs'
 alias gq='get quota'
 alias gs='get svc'
