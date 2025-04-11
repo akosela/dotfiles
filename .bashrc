@@ -215,7 +215,7 @@ alias gpe='kubectl get pods |grep -E "NAMESPACE|CrashLoopBackOff|Error|ImagePull
 alias gpea='kubectl get pods -A |grep -E "NAMESPACE|CrashLoopBackOff|Error|ImagePullBackOff|ErrImagePull|Evicted|Failed|ContainerCreating|ContainerStatusUnknown|Pending|Terminating"'
 alias gpv='get pv'
 alias gpvc='get pvc'
-alias gpw='kubectl get pods -o custom-columns=NAME:.metadata.name,READY:.status.containerStatuses[*].ready,STATUS:.status.phase,RESTARTS:.status.containerStatuses[*].restartCount,NODE:.spec.nodeName'
+alias gpw='kubectl get pods -o custom-columns=NAME:.metadata.name,READY:.status.containerStatuses[*].ready,STATUS:.status.phase,RESTARTS:.status.containerStatuses[*].restartCount,NODE:.spec.nodeName |column -t'
 alias grs='get rs'
 alias gq='get quota'
 alias gs='get svc'
