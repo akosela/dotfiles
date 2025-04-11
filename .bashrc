@@ -211,12 +211,11 @@ alias gi='get ing'
 alias gj='kubectl get -ojson'
 alias gn='get node'
 alias gp='get pod'
-alias gpwide="kubectl get pod -owide |awk '{print \$1, \$2, \$3, \$4, \$5, \$7}'| column -t"
 alias gpe='kubectl get pods |grep -E "NAMESPACE|CrashLoopBackOff|Error|ImagePullBackOff|ErrImagePull|Evicted|Failed|ContainerCreating|ContainerStatusUnknown|Pending|Terminating"'
 alias gpea='kubectl get pods -A |grep -E "NAMESPACE|CrashLoopBackOff|Error|ImagePullBackOff|ErrImagePull|Evicted|Failed|ContainerCreating|ContainerStatusUnknown|Pending|Terminating"'
 alias gpv='get pv'
 alias gpvc='get pvc'
-alias gpw="kubectl get pod -owide |awk '{print \$1, \$2, \$3, \$4, \$5, \$7}'| column -t"
+alias gpw='kubectl get pods -o custom-columns=NAME:.metadata.name,READY:.status.containerStatuses[*].ready,STATUS:.status.phase,RESTARTS:.status.containerStatuses[*].restartCount,NODE:.spec.nodeName'
 alias grs='get rs'
 alias gq='get quota'
 alias gs='get svc'
