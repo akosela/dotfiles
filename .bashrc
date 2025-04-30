@@ -644,3 +644,11 @@ mytr()
     mtr -rc2 $1
   fi
 }
+
+gcr()
+{
+  kubectl api-resources --api-group=$1 -o name | while read resource; do
+    echo "== $resource =="
+    kubectl get "$resource" -n cattle-logging-system --ignore-not-found
+  done
+}
