@@ -647,8 +647,8 @@ mytr()
 
 gcr()
 {
-  kubectl api-resources --api-group=$1 -o name | while read resource; do
+  kubectl api-resources --api-group="$1" -o name | while read resource; do
     echo "== $resource =="
-    kubectl get "$resource" -n cattle-logging-system --ignore-not-found
+    kubectl get "$resource" --ignore-not-found
   done
 }
