@@ -50,10 +50,12 @@ autocmd FileType make
   \ setlocal noexpandtab ts=8 sts=8
 autocmd FileType asm
   \ setlocal noexpandtab ts=8 sts=8 |
+  \ syn match num /\v\$[0-9A-Fa-f]+/ |
   \ syn match op /\t.\{3}/ contains=com |
   \ syn match com /;.*$/ |
+  \ hi num ctermfg=darkyellow |
   \ hi op ctermfg=darkmagenta |
-  \ hi com ctermfg=darkblue
+  \ hi com ctermfg=darkgray
 
 if $_ == "/usr/bin/ex"
   set nu
