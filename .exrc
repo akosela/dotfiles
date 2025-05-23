@@ -48,6 +48,12 @@ autocmd FileType yaml
   \ hi com ctermfg=darkred
 autocmd FileType make
   \ setlocal noexpandtab ts=8 sts=8
+autocmd FileType asm
+  \ setlocal noexpandtab ts=8 sts=8 |
+  \ syn match op /\t.\{3}/ contains=com |
+  \ syn match com /;.*$/ |
+  \ hi op ctermfg=darkmagenta |
+  \ hi com ctermfg=darkblue
 
 if $_ == "/usr/bin/ex"
   set nu
