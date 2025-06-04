@@ -57,7 +57,7 @@ alias dco='docker-compose --ansi=never'
 alias diff='diff --color=always -u'
 alias dotupdate='curl https://raw.githubusercontent.com/akosela/dotfiles/master/.bashrc > ~/.bashrc'
 alias dps="docker ps --format 'table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Command}}\t{{.Status}}'"
-alias e='ex'
+alias e='ed'
 alias f='find'
 alias g='grep'
 alias gc='grep --color'
