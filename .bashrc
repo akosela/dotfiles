@@ -80,6 +80,7 @@ alias l='less'
 alias lj='luajit'
 alias ll='ls -Fl'
 alias llh='ls -Flh'
+alias lock='clear && VLOCK_MESSAGE="" vlock'
 alias ls='ls -F'
 alias lsd="ls -d */ | sed 's/\/$//g' | column -c80"
 alias m='man'
