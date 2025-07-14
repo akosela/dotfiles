@@ -662,3 +662,68 @@ gcr()
     kubectl get "$resource" --ignore-not-found
   done
 }
+
+# kubectl completion
+source <(kubectl completion bash)
+
+_complete_des() {
+    COMP_WORDS=(kubectl describe "${COMP_WORDS[@]:1}")
+    COMP_CWORD=$((COMP_CWORD + 1))
+    local IFS=' '
+    COMP_LINE="${COMP_WORDS[*]}"
+    COMP_POINT=${#COMP_LINE}
+    __start_kubectl
+}
+
+_complete_get() {
+    COMP_WORDS=(kubectl get "${COMP_WORDS[@]:1}")
+    COMP_CWORD=$((COMP_CWORD + 1))
+    local IFS=' '
+    COMP_LINE="${COMP_WORDS[*]}"
+    COMP_POINT=${#COMP_LINE}
+    __start_kubectl
+}
+
+_complete_logs() {
+    COMP_WORDS=(kubectl logs "${COMP_WORDS[@]:1}")
+    COMP_CWORD=$((COMP_CWORD + 1))
+    local IFS=' '
+    COMP_LINE="${COMP_WORDS[*]}"
+    COMP_POINT=${#COMP_LINE}
+    __start_kubectl
+}
+
+_complete_edit() {
+    COMP_WORDS=(kubectl edit "${COMP_WORDS[@]:1}")
+    COMP_CWORD=$((COMP_CWORD + 1))
+    local IFS=' '
+    COMP_LINE="${COMP_WORDS[*]}"
+    COMP_POINT=${#COMP_LINE}
+    __start_kubectl
+}
+
+_complete_del() {
+    COMP_WORDS=(kubectl delete "${COMP_WORDS[@]:1}")
+    COMP_CWORD=$((COMP_CWORD + 1))
+    local IFS=' '
+    COMP_LINE="${COMP_WORDS[*]}"
+    COMP_POINT=${#COMP_LINE}
+    __start_kubectl
+}
+
+_complete_exe() {
+    COMP_WORDS=(kubectl exec "${COMP_WORDS[@]:1}")
+    COMP_CWORD=$((COMP_CWORD + 1))
+    local IFS=' '
+    COMP_LINE="${COMP_WORDS[*]}"
+    COMP_POINT=${#COMP_LINE}
+    __start_kubectl
+}
+
+complete -o default -o bashdefault -F _complete_des des
+complete -o default -o bashdefault -F _complete_get get
+complete -o default -o bashdefault -F _complete_logs logs
+complete -o default -o bashdefault -F _complete_edit edit
+complete -o default -o bashdefault -F _complete_del del
+complete -o default -o bashdefault -F _complete_exe exe
+complete -o default -o bashdefault -F _complete_exe exesh
