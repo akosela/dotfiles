@@ -722,6 +722,8 @@ _complete_exe() {
 
 complete -o default -o bashdefault -F _complete_des des
 complete -o default -o bashdefault -F _complete_get get
+complete -o default -o bashdefault -F _complete_get gety
+complete -o default -o bashdefault -F _complete_get getj
 complete -o default -o bashdefault -F _complete_logs logs
 complete -o default -o bashdefault -F _complete_edit edit
 complete -o default -o bashdefault -F _complete_del del
