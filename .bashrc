@@ -144,12 +144,12 @@ alias filter-branch='git filter-branch'
 alias format-patch='git format-patch'
 alias gg='git grep'
 alias ggrep='git grep'
-#alias glog="git log --graph --pretty=format:'%C(white bold)%h%Creset -%C(red bold)%d%Creset %s %C(cyan bold)(%cr)%Creset <%an>' --abbrev-commit"
-alias glog="git log --graph --pretty=format:'%C(blue)%h%Creset -%C(red)%d%Creset %s %C(blue)(%cr)%Creset <%an>' --abbrev-commit"
+#alias glg="git log --graph --pretty=format:'%C(white bold)%h%Creset -%C(red bold)%d%Creset %s %C(cyan bold)(%cr)%Creset <%an>' --abbrev-commit"
+alias glg="git log --graph --pretty=format:'%C(blue)%h%Creset -%C(red)%d%Creset %s %C(blue)(%cr)%Creset <%an>' --abbrev-commit"
 alias init='git init'
 alias lfs='git lfs'
-#alias log="git log -n 10 --graph --pretty=format:'%C(white bold)%h%Creset -%C(red bold)%d%Creset %s %C(cyan bold)(%cr)%Creset <%an>' --abbrev-commit"
-alias log="git log -n 10 --graph --pretty=format:'%C(blue)%h%Creset -%C(red)%d%Creset %s %C(blue)(%cr)%Creset <%an>' --abbrev-commit"
+#alias lg="git log -n 10 --graph --pretty=format:'%C(white bold)%h%Creset -%C(red bold)%d%Creset %s %C(cyan bold)(%cr)%Creset <%an>' --abbrev-commit"
+alias lg="git log -n 10 --graph --pretty=format:'%C(blue)%h%Creset -%C(red)%d%Creset %s %C(blue)(%cr)%Creset <%an>' --abbrev-commit"
 alias merge='git merge'
 alias move='git mv'
 alias pick='git cherry-pick'
@@ -250,7 +250,7 @@ alias kwait='kubectl wait'
 alias label='kubectl label'
 alias lab='kubectl label'
 alias lim='res'
-alias logs='kubectl logs'
+alias log='kubectl logs'
 alias nsl='kubens'
 alias ns-='kubens -'
 alias options='kubectl options'
@@ -542,7 +542,7 @@ radosgw-admin()
   kubectl exec -it $tools -n rook-ceph -- radosgw-admin $1 $2 $3
 }
 
-logsall ()
+logall ()
 {
     kubectl logs --prefix -l app.kubernetes.io/instance=$1
 }
@@ -724,7 +724,7 @@ complete -o default -o bashdefault -F _complete_des des
 complete -o default -o bashdefault -F _complete_get get
 complete -o default -o bashdefault -F _complete_get gety
 complete -o default -o bashdefault -F _complete_get getj
-complete -o default -o bashdefault -F _complete_logs logs
+complete -o default -o bashdefault -F _complete_logs log
 complete -o default -o bashdefault -F _complete_edit edit
 complete -o default -o bashdefault -F _complete_del del
 complete -o default -o bashdefault -F _complete_exe exe
