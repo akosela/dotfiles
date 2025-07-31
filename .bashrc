@@ -235,7 +235,6 @@ alias gsts='get sts'
 alias gvs='get vs'
 alias gw='get validatingwebhookconfiguration,mutatingwebhookconfiguration'
 alias gy='kubectl get -oyaml'
-alias img='image'
 alias kcp='kubectl cp'
 alias kdiff='kubectl diff'
 alias kdif='kubectl diff'
@@ -387,9 +386,9 @@ res()
     grep -vE 'Container ID|Port|Image|Image ID|Command|Restart Count|Liveness|Environment|--|Args:|State:|SeccompProfile'
 }
 
-image()
+img()
 {
-  kubectl describe pod $1 |grep -e Image: |sort -nu
+  kubectl describe $1 $2 |grep -e Image: |sort -u
 }
 
 labels()
