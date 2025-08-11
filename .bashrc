@@ -516,7 +516,7 @@ ct()
   if [ ! -z $1 ]; then
     kubectx $1
   else
-    kubectx -c
+    echo `kubectx -c`:`kubens -c`
   fi
 }
 
