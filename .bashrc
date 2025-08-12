@@ -719,7 +719,17 @@ _complete_exe() {
     __start_kubectl
 }
 
+_complete_cp() {
+    COMP_WORDS=(kubectl cp "${COMP_WORDS[@]:1}")
+    COMP_CWORD=$((COMP_CWORD + 1))
+    local IFS=' '
+    COMP_LINE="${COMP_WORDS[*]}"
+    COMP_POINT=${#COMP_LINE}
+    __start_kubectl
+}
+
 complete -o default -o bashdefault -F _complete_des des
+complete -o default -o bashdefault -F _complete_des img
 complete -o default -o bashdefault -F _complete_get get
 complete -o default -o bashdefault -F _complete_get gety
 complete -o default -o bashdefault -F _complete_get getj
@@ -728,3 +738,4 @@ complete -o default -o bashdefault -F _complete_edit edit
 complete -o default -o bashdefault -F _complete_del del
 complete -o default -o bashdefault -F _complete_exe exe
 complete -o default -o bashdefault -F _complete_exe exesh
+complete -o default -o bashdefault -F _complete_cp kcp
