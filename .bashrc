@@ -366,13 +366,7 @@ getc()
   echo
 }
 
-util()
-{
-  kubectl describe node $1 |
-    sed -ne '/Name:/,+p' -e '/Capacity:/,+13p' -e '/Resource/,+6p'
-}
-
-util-all()
+cap()
 {
   for node in `kubectl get nodes -oname |cut -d/ -f2`; do
     echo "=== $node ==="
