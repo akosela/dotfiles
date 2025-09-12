@@ -372,6 +372,14 @@ util()
     sed -ne '/Name:/,+p' -e '/Capacity:/,+13p' -e '/Resource/,+6p'
 }
 
+util-all()
+{
+  for node in `kubectl get nodes -oname |cut -d/ -f2`; do
+    echo "=== $node ==="
+    kubectl describe node "$node" | sed -n '/Resource/,+3p'
+  done
+}
+
 laststate()
 {
   kubectl describe pod $1 | grep -B2 -A4 -e 'Image:' -e 'Last State:' |
