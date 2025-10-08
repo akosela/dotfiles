@@ -307,7 +307,7 @@ down()
 
 png()
 {
-  ping -nc2 -s16 -W2 $1 |grep -e icmp -e from -e loss
+  ping -nc2 -s16 -W2 $1 |grep -e PING -e icmp -e from -e loss
 }
 
 get()
