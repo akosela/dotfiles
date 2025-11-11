@@ -691,7 +691,7 @@ _complete_des() {
 }
 
 _complete_despod() {
-    COMP_WORDS=(kubectl describe pod "${COMP_WORDS[@]:2}")
+    COMP_WORDS=(kubectl describe pod "${COMP_WORDS[@]:1}")
     COMP_CWORD=$((COMP_CWORD + 2))
     local IFS=' '
     COMP_LINE="${COMP_WORDS[*]}"
@@ -709,7 +709,7 @@ _complete_get() {
 }
 
 _complete_getpod() {
-    COMP_WORDS=(kubectl get pod "${COMP_WORDS[@]:2}")
+    COMP_WORDS=(kubectl get pod "${COMP_WORDS[@]:1}")
     COMP_CWORD=$((COMP_CWORD + 2))
     local IFS=' '
     COMP_LINE="${COMP_WORDS[*]}"
