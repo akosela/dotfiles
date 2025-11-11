@@ -699,6 +699,15 @@ _complete_get() {
     __start_kubectl
 }
 
+_complete_getpod() {
+    COMP_WORDS=(kubectl get pod "${COMP_WORDS[@]:2}")
+    COMP_CWORD=$((COMP_CWORD + 2))
+    local IFS=' '
+    COMP_LINE="${COMP_WORDS[*]}"
+    COMP_POINT=${#COMP_LINE}
+    __start_kubectl
+}
+
 _complete_logs() {
     COMP_WORDS=(kubectl logs "${COMP_WORDS[@]:1}")
     COMP_CWORD=$((COMP_CWORD + 1))
@@ -744,9 +753,9 @@ _complete_cp() {
     __start_kubectl
 }
 
-complete -o default -o bashdefault -F _complete_des des
-complete -o default -o bashdefault -F _complete_des img
 complete -o default -o bashdefault -F _complete_get get
+complete -o default -o bashdefault -F _complete_des des
+complete -o default -o bashdefault -F _complete_getpod img
 complete -o default -o bashdefault -F _complete_get gety
 complete -o default -o bashdefault -F _complete_get getj
 complete -o default -o bashdefault -F _complete_logs log
