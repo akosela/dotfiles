@@ -690,6 +690,15 @@ _complete_des() {
     __start_kubectl
 }
 
+_complete_despod() {
+    COMP_WORDS=(kubectl describe pod "${COMP_WORDS[@]:2}")
+    COMP_CWORD=$((COMP_CWORD + 2))
+    local IFS=' '
+    COMP_LINE="${COMP_WORDS[*]}"
+    COMP_POINT=${#COMP_LINE}
+    __start_kubectl
+}
+
 _complete_get() {
     COMP_WORDS=(kubectl get "${COMP_WORDS[@]:1}")
     COMP_CWORD=$((COMP_CWORD + 1))
@@ -764,3 +773,4 @@ complete -o default -o bashdefault -F _complete_del del
 complete -o default -o bashdefault -F _complete_exe exe
 complete -o default -o bashdefault -F _complete_exe exesh
 complete -o default -o bashdefault -F _complete_cp kcp
+complete -o default -o bashdefault -F _complete_despod res
