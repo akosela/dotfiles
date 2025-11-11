@@ -391,7 +391,20 @@ res()
 
 img()
 {
-  kubectl describe $1 $2 |grep -e Image: |sort -u
+  case "$1" in
+  -a)
+    kubectl get pod -A \
+      -o jsonpath='{range .items[*]}{range .spec.initContainers[*]}{.image}{"\n"}{end}{range .spec.containers[*]}{.image}{"\n"}{end}{end}' | sort -u
+    ;;
+  "")
+    kubectl get pod \
+      -o jsonpath='{range .items[*]}{range .spec.initContainers[*]}{.image}{"\n"}{end}{range .spec.containers[*]}{.image}{"\n"}{end}{end}' \
+    ;;
+  *)
+    kubectl get pod $1 \
+      -o jsonpath='{range .spec.initContainers[*]}{.image}{"\n"}{end}{range .spec.containers[*]}{.image}{"\n"}{end}'
+    ;;
+  esac
 }
 
 labels()
