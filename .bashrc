@@ -767,6 +767,7 @@ complete -o default -o bashdefault -F _complete_des des
 complete -o default -o bashdefault -F _complete_getpod img
 complete -o default -o bashdefault -F _complete_get gety
 complete -o default -o bashdefault -F _complete_get getj
+complete -o default -o bashdefault -F _complete_getpod getc
 complete -o default -o bashdefault -F _complete_logs log
 complete -o default -o bashdefault -F _complete_edit edit
 complete -o default -o bashdefault -F _complete_del del
