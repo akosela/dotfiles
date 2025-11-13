@@ -680,7 +680,8 @@ gcr()
 
 gy()
 {
-  kubectl get -oyaml $1 $2 |sed -n /^spec:/,/^status:/p |sed '$d'
+  kubectl get -oyaml $1 $2 |sed -n /^spec:/,/^status:/p |sed '$d' \
+    | bat -fp -lyaml --theme=Coldark-Cold
 }
 
 # kubectl completion
