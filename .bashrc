@@ -235,7 +235,7 @@ alias gss='get sealedsecret'
 alias gsts='get sts'
 alias gvs='get vs'
 alias gw='get validatingwebhookconfiguration,mutatingwebhookconfiguration'
-alias gy='kubectl get -oyaml'
+alias gya='kubectl get -oyaml'
 alias kcp='kubectl cp'
 alias kdiff='kubectl diff'
 alias kdif='kubectl diff'
@@ -678,6 +678,11 @@ gcr()
   done
 }
 
+gy()
+{
+  kubectl get -oyaml $1 $2 |sed -n /^spec:/,/^status:/p |sed '$d'
+}
+
 # kubectl completion
 source <(kubectl completion bash)
 
@@ -766,6 +771,8 @@ complete -o default -o bashdefault -F _complete_get get
 complete -o default -o bashdefault -F _complete_des des
 complete -o default -o bashdefault -F _complete_getpod img
 complete -o default -o bashdefault -F _complete_get gety
+complete -o default -o bashdefault -F _complete_get gy
+complete -o default -o bashdefault -F _complete_get gya
 complete -o default -o bashdefault -F _complete_get getj
 complete -o default -o bashdefault -F _complete_getpod getc
 complete -o default -o bashdefault -F _complete_logs log
