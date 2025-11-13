@@ -775,3 +775,4 @@ complete -o default -o bashdefault -F _complete_exe exe
 complete -o default -o bashdefault -F _complete_exe exesh
 complete -o default -o bashdefault -F _complete_cp kcp
 complete -o default -o bashdefault -F _complete_despod res
+complete -o default -o bashdefault -F _complete_getpod gv
