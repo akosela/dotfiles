@@ -265,7 +265,7 @@ alias rep='kubectl replace'
 alias rollout='kubectl rollout'
 alias rol='kubectl rollout'
 alias run='kubectl run'
-alias scale='kubectl scale'
+alias sca='kubectl scale'
 alias taint='kubectl taint'
 alias uncordon='kubectl uncordon'
 
@@ -768,6 +768,15 @@ _complete_cp() {
     __start_kubectl
 }
 
+_complete_sca() {
+    COMP_WORDS=(kubectl scale "${COMP_WORDS[@]:1}")
+    COMP_CWORD=$((COMP_CWORD + 1))
+    local IFS=' '
+    COMP_LINE="${COMP_WORDS[*]}"
+    COMP_POINT=${#COMP_LINE}
+    __start_kubectl
+}
+
 complete -o default -o bashdefault -F _complete_get get
 complete -o default -o bashdefault -F _complete_des des
 complete -o default -o bashdefault -F _complete_getpod img
@@ -784,3 +793,4 @@ complete -o default -o bashdefault -F _complete_exe exesh
 complete -o default -o bashdefault -F _complete_cp kcp
 complete -o default -o bashdefault -F _complete_despod res
 complete -o default -o bashdefault -F _complete_getpod gv
+complete -o default -o bashdefault -F _complete_sca sca
