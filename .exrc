@@ -45,7 +45,7 @@ autocmd FileType yaml
   \ syn match com /#.*$/ |
   \ hi item ctermfg=darkblue |
   \ hi item2 ctermfg=darkblue |
-  \ hi com ctermfg=darkred
+  \ hi com ctermfg=darkgrey
 autocmd FileType make
   \ setlocal noexpandtab ts=8 sts=8
 autocmd FileType asm
