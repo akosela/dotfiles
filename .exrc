@@ -43,8 +43,8 @@ autocmd FileType yaml
   \ syn match item /.\+\w\+:$/ contains=com |
   \ syn match item2 /.\+\w\+: / contains=com |
   \ syn match com /#.*$/ |
-  \ hi item ctermfg=darkblue |
-  \ hi item2 ctermfg=darkblue |
+  \ hi item ctermfg=24 |
+  \ hi item2 ctermfg=24 |
   \ hi com ctermfg=darkgrey
 autocmd FileType make
   \ setlocal noexpandtab ts=8 sts=8
