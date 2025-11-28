@@ -23,7 +23,7 @@ filetype on
 hi LineNr cterm=NONE ctermfg=grey
 autocmd FileType conf,gitconfig
   \ syn match com /#.*$/ |
-  \ hi com ctermfg=darkblue
+  \ hi com ctermfg=darkgrey
 autocmd FileType sh
   \ syn match v /$#.*/ |
   \ syn match shebang /#!/ |
@@ -31,14 +31,14 @@ autocmd FileType sh
   \ syn match space_err display excludenl /\s\+$/ |
   \ hi shebang cterm=NONE |
   \ hi space_err ctermbg=red |
-  \ hi com ctermfg=darkblue |
+  \ hi com ctermfg=darkgrey |
   \ hi v cterm=NONE |
 autocmd FileType c
   \ syn match com /\/\/.*$/ |
   \ syn region com start=/\/\*/ end=/\*\// |
   \ syn match space_err display excludenl "\s\+$" |
   \ hi space_err ctermbg=red |
-  \ hi com ctermfg=darkblue |
+  \ hi com ctermfg=darkgrey |
 autocmd FileType yaml
   \ syn match item /.\+\w\+:$/ contains=com |
   \ syn match item2 /.\+\w\+: / contains=com |
