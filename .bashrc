@@ -146,12 +146,12 @@ alias filter-branch='git filter-branch'
 alias format-patch='git format-patch'
 alias gg='git grep'
 alias ggrep='git grep'
-#alias glg="git log --graph --pretty=format:'%C(white bold)%h%Creset -%C(red bold)%d%Creset %s %C(cyan bold)(%cr)%Creset <%an>' --abbrev-commit"
-alias glg="git log --graph --pretty=format:'%C(blue)%h%Creset -%C(red)%d%Creset %s %C(blue)(%cr)%Creset <%an>' --abbrev-commit"
+alias glg="git log --graph --pretty=format:'%C(white bold)%h%Creset -%C(red)%d%Creset %s %C(cyan bold)(%cr)%Creset <%an>' --abbrev-commit"
+#alias glg="git log --graph --pretty=format:'%C(blue)%h%Creset -%C(red)%d%Creset %s %C(blue)(%cr)%Creset <%an>' --abbrev-commit"
 alias init='git init'
 alias lfs='git lfs'
-#alias lg="git log -n 10 --graph --pretty=format:'%C(white bold)%h%Creset -%C(red bold)%d%Creset %s %C(cyan bold)(%cr)%Creset <%an>' --abbrev-commit"
-alias lg="git log -n 10 --graph --pretty=format:'%C(blue)%h%Creset -%C(red)%d%Creset %s %C(blue)(%cr)%Creset <%an>' --abbrev-commit"
+alias lg="git log -n 10 --graph --pretty=format:'%C(white bold)%h%Creset -%C(red)%d%Creset %s %C(cyan bold)(%cr)%Creset <%an>' --abbrev-commit"
+#alias lg="git log -n 10 --graph --pretty=format:'%C(blue)%h%Creset -%C(red)%d%Creset %s %C(blue)(%cr)%Creset <%an>' --abbrev-commit"
 alias merge='git merge'
 alias move='git mv'
 alias pick='git cherry-pick'

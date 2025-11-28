@@ -3,13 +3,13 @@ name = Andy Kosela
 email = akosela@andykosela.com
 
 [color "branch"]
-current = blue
-remote = blue
+current = normal
+remote = normal
 upstream = red
 
 [color "diff"]
 new = green
-commit = blue
+commit = normal
 
 [color "status"]
 added = green
