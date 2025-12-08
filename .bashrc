@@ -796,3 +796,4 @@ complete -o default -o bashdefault -F _complete_despod res
 complete -o default -o bashdefault -F _complete_getpod gv
 complete -o default -o bashdefault -F _complete_sca sca
 complete -o default -o bashdefault -F _complete_getpod eve
+complete -o default -o bashdefault -F _complete_getpod laststate
