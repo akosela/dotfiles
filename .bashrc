@@ -221,6 +221,7 @@ alias gety='kubectl get -oyaml'
 alias gi='get ing'
 alias gj='kubectl get -ojson'
 alias gn='get node'
+alias gnw='kubectl get node'
 alias gp='get pod'
 alias gpe='kubectl get pod |grep -E "NAME|CrashLoopBackOff|Error|ImagePullBackOff|ErrImagePull|Evicted|Failed|ContainerCreating|ContainerStatusUnknown|Pending|Terminating"'
 alias gpea="kubectl get pod -A |grep -E 'NAMESPACE|CrashLoopBackOff|Error|ImagePullBackOff|ErrImagePull|Evicted|Failed|ContainerCreating|ContainerStatusUnknown|Pending|Terminating' |awk '{print \$1, \$2, \$3, \$4}' |column -t"
