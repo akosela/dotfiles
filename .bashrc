@@ -226,6 +226,7 @@ alias gp='get pod'
 alias gpe='kubectl get pod |grep -E "NAME|CrashLoopBackOff|Error|ImagePullBackOff|ErrImagePull|Evicted|Failed|ContainerCreating|ContainerStatusUnknown|Pending|Terminating"'
 alias gpea="kubectl get pod -A |grep -E 'NAMESPACE|CrashLoopBackOff|Error|ImagePullBackOff|ErrImagePull|Evicted|Failed|ContainerCreating|ContainerStatusUnknown|Pending|Terminating' |awk '{print \$1, \$2, \$3, \$4}' |column -t"
 alias gpew='kubectl get pod -owide |grep -E "NAME|CrashLoopBackOff|Error|ImagePullBackOff|ErrImagePull|Evicted|Failed|ContainerCreating|ContainerStatusUnknown|Pending|Terminating"'
+alias gpeaw='kubectl get pod -A -owide |grep -E "NAMESPACE|CrashLoopBackOff|Error|ImagePullBackOff|ErrImagePull|Evicted|Failed|ContainerCreating|ContainerStatusUnknown|Pending|Terminating"'
 alias gpv='get pv'
 alias gpvc='get pvc'
 alias gpw='kubectl get pod -owide'
