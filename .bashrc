@@ -108,7 +108,6 @@ alias u='uptime'
 alias un='uname -a'
 alias v='vi'
 alias vim='vi -u ~/.exrc.white'
-alias watch='watch bash -ic'
 alias x='exit'
 alias y='yes'
 alias z='kill'
@@ -685,6 +684,11 @@ gy()
 {
   kubectl get -oyaml $1 $2 |sed -n /^spec:/,/^status:/p |sed '$d' \
     | bat -fp -lyaml --theme=Coldark-Cold
+}
+
+wa()
+{
+  watch bash -lc \'$@\'
 }
 
 # kubectl completion
