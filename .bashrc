@@ -53,7 +53,6 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias cl='clear'
 alias cmatrix='cmatrix -s -C red'
-alias cu='curl -s -L -o /dev/null -w "%{url_effective} %{http_code}\n" 2>&1'
 alias d='diff'
 alias dco='docker-compose --ansi=never'
 alias diff='diff --color=always -u'
@@ -693,9 +692,9 @@ wa()
   watch bash -lc \'$@\'
 }
 
-cutls()
+cu()
 {
-  curl -v -L 2>&1 $1 | grep 'SSL cert'
+  curl -vsLI $1 2>&1 | grep -E '^HTTP|SSL cert'
 }
 
 # kubectl completion
