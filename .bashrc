@@ -694,7 +694,7 @@ wa()
 
 cu()
 {
-  curl -vsLI $1 2>&1 | grep -E '^HTTP|SSL cert'
+  curl -vsLI https://$1 2>&1 | grep -E '^HTTP|SSL cert|^location:'
 }
 
 # kubectl completion
