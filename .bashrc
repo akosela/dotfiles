@@ -665,12 +665,13 @@ h2b()
   echo "obase=2; ibase=16; `echo $1 | tr 'a-f' 'A-F'`" | bc
 }
 
-mytr()
+mtr()
 {
+  mytr=`which mtr`
   if [ "$1" == "-t" ]; then
-    mtr -t $2
+    $mytr -t $2
   else
-    mtr -rc2 $1
+    $mytr -rc2 $1
   fi
 }
 
