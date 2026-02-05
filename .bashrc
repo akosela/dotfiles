@@ -61,6 +61,7 @@ alias dps="docker ps --format 'table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Comm
 alias e='ed'
 alias f='find'
 alias g='grep'
+alias ga='kubectl get pods -A --sort-by=.metadata.creationTimestamp |tail |tac'
 alias gc='grep --color'
 alias gdb='gdb -q -ex "set sty addr foreground none" -ex "set disassembly int"'
 alias gob='go build -ldflags="-s -w"'
