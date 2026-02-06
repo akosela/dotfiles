@@ -323,7 +323,8 @@ get()
     kubectl get "$@" |awk '{print $1, $2, $3}' |column -t
     ;;
   *pod*)
-    kubectl get "$@"
+    kubectl get "$@" |awk '{print $1, $2, $3, $4}' |column -t
+    #kubectl get "$@"
     ;;
   *vs*|*volumesnapshot*)
     kubectl get "$@" |awk '{print $1, $2}' |column -t
