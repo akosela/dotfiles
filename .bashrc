@@ -465,7 +465,7 @@ vol()
     (.spec.volumes // [] | .[] | "  \(.name): \((voltype(.)))"),
     (if ((.spec.volumes // []) | map(has("persistentVolumeClaim")) | any)
       then ""
-      else "  ! no PVC volumes in this pod"
+      else "  ! no PVC volumes in this pod\n"
      end),
 
     "=== CONTAINER MOUNTS (volumeMounts) ===",
@@ -489,8 +489,7 @@ vol()
               | if length==0
                 then "  (none)"
                 else .[] | "  " + fmt_mount(.)
-                end),
-            ""
+                end)
         end)
   '
 }
