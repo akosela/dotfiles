@@ -432,6 +432,70 @@ gv()
   kubectl get pod $1 -ojsonpath='{range .spec.volumes[*]}{.name}{"\n"}{"  pvc: "}{.persistentVolumeClaim.claimName}{"\n"}{end}'
 }
 
+gm()
+{
+  kubectl get pod $1 -o jsonpath='{range .spec.containers[*]}{.name}{":\n"}{range .volumeMounts[*]}{"  "}{.name}{" -> "}{.mountPath}{"\n"}{end}'
+}
+
+vol()
+{
+  local pod="$1"
+
+  kubectl get pod "$pod" -o json | jq -r '
+    def voltype(v):
+      if v.persistentVolumeClaim then "pvc(" + v.persistentVolumeClaim.claimName + ")"
+      elif v.configMap            then "configMap(" + v.configMap.name + ")"
+      elif v.secret               then "secret(" + v.secret.secretName + ")"
+      elif v.emptyDir             then "emptyDir"
+      elif v.hostPath             then "hostPath(" + v.hostPath.path + ")"
+      elif v.projected            then "projected"
+      elif v.downwardAPI          then "downwardAPI"
+      elif v.ephemeral            then "ephemeral"
+      elif v.csi                  then "csi(" + (v.csi.driver // "?") + ")"
+      elif v.nfs                  then "nfs(" + (v.nfs.server // "?") + ":" + (v.nfs.path // "?") + ")"
+      else "other"
+      end;
+
+    def fmt_mount(m):
+      "\(m.name) -> \(m.mountPath)"
+      + (if (m.subPath? // "") != "" then " (subPath=" + m.subPath + ")" else "" end)
+      + (if (m.readOnly? == true) then " [ro]" else "" end);
+
+    "=== VOLUMES (spec.volumes) ===",
+    (.spec.volumes // [] | .[] | "  - \(.name): \((voltype(.)))"),
+    (if ((.spec.volumes // []) | map(has("persistentVolumeClaim")) | any)
+      then ""
+      else "  ! no PVC volumes in this pod"
+     end),
+
+    "",
+    "=== CONTAINER MOUNTS (volumeMounts) ===",
+    (.spec.containers // [] | .[] |
+      ("Container: \(.name)"),
+      ((.volumeMounts // [])
+        | if length==0
+          then "  (none)"
+          else .[] | "  " + fmt_mount(.)
+          end),
+      ""
+    ),
+
+    "=== INIT CONTAINER MOUNTS (volumeMounts) ===",
+    ((.spec.initContainers // [])
+      | if length==0
+        then "  (none)"
+        else .[]
+          | ("Init: \(.name)"),
+            ((.volumeMounts // [])
+              | if length==0
+                then "  (none)"
+                else .[] | "  " + fmt_mount(.)
+                end),
+            ""
+        end)
+  '
+}
+
 # eve <pod> -n <ns>
 eve()
 {
