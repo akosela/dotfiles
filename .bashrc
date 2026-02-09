@@ -462,16 +462,15 @@ vol()
       + (if (m.readOnly? == true) then " [ro]" else "" end);
 
     "=== VOLUMES (spec.volumes) ===",
-    (.spec.volumes // [] | .[] | "  - \(.name): \((voltype(.)))"),
+    (.spec.volumes // [] | .[] | "  \(.name): \((voltype(.)))"),
     (if ((.spec.volumes // []) | map(has("persistentVolumeClaim")) | any)
       then ""
       else "  ! no PVC volumes in this pod"
      end),
 
-    "",
     "=== CONTAINER MOUNTS (volumeMounts) ===",
     (.spec.containers // [] | .[] |
-      ("Container: \(.name)"),
+      ("\(.name):"),
       ((.volumeMounts // [])
         | if length==0
           then "  (none)"
@@ -485,7 +484,7 @@ vol()
       | if length==0
         then "  (none)"
         else .[]
-          | ("Init: \(.name)"),
+          | ("\(.name):"),
             ((.volumeMounts // [])
               | if length==0
                 then "  (none)"
