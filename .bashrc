@@ -627,7 +627,7 @@ radosgw-admin()
 
 logall ()
 {
-    kubectl logs --prefix -l app.kubernetes.io/instance=$1
+    kubectl logs --prefix -l $1 $2
 }
 
 enc()
