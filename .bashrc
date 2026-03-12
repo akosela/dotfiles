@@ -500,7 +500,10 @@ vol()
   '
 }
 
+# eve
+# eve <pod>
 # eve <pod> -n <ns>
+# eve -n <ns>
 eve()
 {
   if [ ! -z $1 ]; then
