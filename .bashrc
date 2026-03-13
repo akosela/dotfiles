@@ -429,7 +429,7 @@ labels()
 gl()
 {
   kubectl get $1 $2 -ojsonpath='{"labels:\n"}{.metadata.labels}{"\n"}' |
-    sed 's/:/: /g ; s/.*,/  &/' | tr -d '{}"' |
+    sed 's/:/=/g ; s/.*,/  &/' | tr -d '{}"' |
     cut -d, --output-delimiter=$'\n  ' -f1-
 }
 
