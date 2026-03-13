@@ -428,9 +428,12 @@ labels()
 
 gl()
 {
-  kubectl get $1 $2 -ojsonpath='{"labels:\n"}{.metadata.labels}{"\n"}' |
-    sed 's/:/=/g ; s/.*,/  &/' | tr -d '{}"' |
-    cut -d, --output-delimiter=$'\n  ' -f1-
+  kubectl get "$1" "$2" -ojsonpath='{.metadata.labels}' |
+    tr -d '{}"' |
+    tr ',' '\n' |
+    sed 's/:/=/; s/^/  /; 1i\
+labels:'
+  echo
 }
 
 gv()
