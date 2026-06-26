@@ -14,4 +14,8 @@ sh install.sh
 
 # Updating .bashrc
 dotupdate
+
+UPDATE Jun-2026:
+  * core aliases/functions moved to dsh (darkshell) project
+    https://github.com/akosela/dsh
 ```
